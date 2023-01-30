@@ -1,6 +1,7 @@
 /* ---------fontcolor -------------*/
 body{
     color: #151515;
+    font-family: 'Noto Serif JP', serif;
 }
 .red{
     color: #dd1b57;
@@ -30,10 +31,10 @@ body{
 .text-lv1{
     font-size: 16px;
 }
-.text-lv1{
+.text-lv2{
     font-size: 15px;
 }
-.text-lv1{
+.text-lv3{
     font-size: 14px;
 }
 
@@ -53,4 +54,40 @@ body{
 }
 .h__list__item{
      margin: 0 0 0 50px;
+}
+
+/* -------各コンテンツで使用----- */
+.content__title{
+    white-space: nowrap;
+}
+
+/* -------main----- */
+.main{
+    height: 600px;
+    background-image: url(../img/pc_mv.jpg);
+    background-size: cover;
+}
+.main__container{
+    max-width: 1110px;
+    height: 500px;
+    margin: 70px auto 100px; 
+}
+.news{
+    display: flex;
+    margin-bottom: 80px;
+}
+.news__box__title{
+    /* width: 250px; */
+    margin: 0 130px 0 0;
+}
+.news__artcles__item{
+    display: flex;
+}
+.news__artcles__item__time{
+    font-weight: bold;
+    padding: 0 40px 0 0;
+}
+.news__artcles__item{
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e8e8;
 }
