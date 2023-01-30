@@ -1,0 +1,56 @@
+/* ---------fontcolor -------------*/
+body{
+    color: #151515;
+}
+.red{
+    color: #dd1b57;
+}
+.blue{
+    color: #349bf4;
+}
+/* ---------fontsize -------------*/
+.title-lv1{
+    font-size: 160px;
+}
+.title-lv2{
+    font-size: 40px;
+}
+.title-lv3{
+    font-size: 40px;
+}
+.title-lv3{
+    font-size: 18px;
+}
+.subtitle-lv1{
+    font-size: 24px;
+}
+.subtitle-lv2{
+    font-size: 18px;
+}
+.text-lv1{
+    font-size: 16px;
+}
+.text-lv1{
+    font-size: 15px;
+}
+.text-lv1{
+    font-size: 14px;
+}
+
+/* -------header----- */
+.h__container{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    padding: 0 70px;
+    align-items: center; 
+}
+.h_nav{
+    margin: 0 0 0 auto;
+}
+.h__list{
+    display: flex;
+}
+.h__list__item{
+     margin: 0 0 0 50px;
+}
