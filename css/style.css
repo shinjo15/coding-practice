@@ -69,9 +69,10 @@ body{
 }
 .main__container{
     max-width: 1110px;
-    height: 500px;
     margin: 70px auto 100px; 
 }
+
+/* -------news----- */
 .news{
     display: flex;
     margin-bottom: 80px;
@@ -90,4 +91,63 @@ body{
 .news__artcles__item{
     padding: 20px 0;
     border-bottom: 1px solid #e8e8e8;
+}
+
+/* -------service----- */
+.service{
+    position: relative;
+}
+.service__content{
+    margin: 60px 0 0 0;
+    display: flex;
+    gap: 30px;
+}
+.service__content__box{
+    width: 350px;
+    padding: 50px 50px 75px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 8px gray;
+}
+.icon-size{
+    font-size: 50px;
+}
+.service__content__item__title{
+    padding: 15px 0 0 0;
+}
+.service__content__item__text{
+    text-align: left;
+    padding: 20px 0 0 0;
+}
+.service__back-text{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #f2f2f2;
+    letter-spacing: 20px;
+    position: absolute;
+    line-height: 70%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+/* -------footer----- */
+footer{
+    background-color: #dd1b57;
+    padding: 65px 0 50px;
+}
+.f__content{
+    max-width: 1110px;
+    margin: 0 auto;
+    color: #fff;
+}
+.f__content__list{
+    display: flex;
+    margin: 0 0 25px 0;
+}
+.f__content__item{
+    margin: 0 50px 0 0;
+}
+.f__content__item:last-child{
+    margin: 0;
 }
