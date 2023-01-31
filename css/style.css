@@ -62,7 +62,7 @@ body{
 }
 
 /* -------main----- */
-.main{
+.main-visual{
     height: 600px;
     background-image: url(../img/pc_mv.jpg);
     background-size: cover;
@@ -131,6 +131,7 @@ body{
     top: 0;
     z-index: -1;
 }
+
 /* -------footer----- */
 footer{
     background-color: #dd1b57;
@@ -150,4 +151,10 @@ footer{
 }
 .f__content__item:last-child{
     margin: 0;
+}
+
+/* -------message.html----- */
+.content__title{
+    height: 190px;
+    background-image: url(../img/pc_mv.jpg);
 }
