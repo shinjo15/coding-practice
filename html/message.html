@@ -18,7 +18,7 @@
     <header>
         <div class="h__container">
             <a href="#top">
-                <h1><img src="../img/logo.svg"></h1>
+                <h1><img src="../img/logo.svg" class="h__container__logo"></h1>
             </a>
             <nav class="h_nav">
                 <ul class="h__list">
@@ -27,9 +27,24 @@
                     <li class="h__list__item text-lv1"><a href="company.html">会社概要</a></li>
                 </ul>
             </nav>
-        </div>
+            <!------------ ハンバーガーメニュー --------->
+            <div id="hm">
+                <ul class="hm__list">
+                    <li class="hm__list__item"><a href="index.html">ホーム</a></li>
+                    <li class="hm__list__item"><a href="message.html">メッセージ</a></li>
+                    <li class="hm__list__item"><a href="#top">会社概要</a></li>
+                </ul>
+            </div>
+            <div id="hm__icon">
+                <a href="#" class="hm__menu-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>  
+        </div>      
     </header>
-    <main>
+    <main>        
         <!------------ メッセージ --------->
         <section class="content__main-title">
             <div class="content__main-title__box">
