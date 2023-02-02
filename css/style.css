@@ -1,0 +1,12 @@
+:root{
+    --fc: #fff;
+    --fc_purple: #D136D1;
+    --btn_gra: linear-gradient(to right, #c41a7f, #664bbf);
+    --btn_bg:  #DD118E;
+    --bg-gra: linear-gradient(135deg, #0E002E 0%, #1E092B 25%, #320C65 50%, #A01B7C 75%, #C21780 100%);
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Serif JP', serif;
+    font-family: 'Roboto', sans-serif;
+}
