@@ -9,9 +9,29 @@ body{
     font-family: 'Montserrat','Noto Serif JP Bold', sans-serif;
     font-feature-settings: "palt" 1;
 }
-
+/* ------------各コンテンツで使用------------ */
 .content-container{
     padding: 110px 120px;
+}
+.btn{
+    background: var(--btn_gra);
+    text-align: center;
+    color: var(--fc);
+    border-radius: 50px;
+    box-shadow: 0 10px var(--btn_bg);
+    transition: .3s;
+}
+.btn:hover{
+    transform: translateY(10px);
+    box-shadow: none;
+}
+.m_size{
+    width: 300px;
+    padding: 27.5px;
+}
+.s_size{
+    width: 230px;
+    padding: 22.5px;
 }
 
 /* -----------header----- */
@@ -54,7 +74,8 @@ body{
 }
 .mv-container{
     display: flex;
-    padding: 0 120px;
+    max-width: 1110px;
+    margin: 0 auto;
 }
 .mv__box__text{
     padding:145px 0;
@@ -70,11 +91,38 @@ body{
 .mv__content__box{
     display: flex;
 }
+.mv__content__time-btn-box{
+    margin: 0 10px 0 0;
+}
 .mv__time{
     font-size: 36px;
+    padding: 0 0 30px 0;
     color: var(--fc);
 }
-.mv__btn{
+.mv_content__img__turn{
+    transform: rotate(-0.036turn);
+}
+.mv__box__img{
+    position: relative;
+    height: 700px;
+}
+.mv__img{
+    height: 100%;
+}
+.mv__img__text-box{
+    position: absolute;
+    bottom: 20px;
+    right: 110px;
+    z-index: 2;
+}
+.mv__content__img__name{
     color: var(--fc);
+    font-size: 21px;
+    margin: 0 0 5px 0;
+    letter-spacing: -.2rem;
+}
+.mv__content__img__job{
+    color: var(--fc);
+    font-size: 14px;
 }
 
