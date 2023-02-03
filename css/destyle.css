@@ -136,7 +136,7 @@ address {
 
 a {
   background-color: transparent;
-  /* text-decoration: none; */
+  text-decoration: none;
   color: inherit;
 }
 
