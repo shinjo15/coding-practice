@@ -10,9 +10,33 @@ body{
     font-feature-settings: "palt" 1;
 }
 /* ------------各コンテンツで使用------------ */
-.content-container{
-    padding: 110px 120px;
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 0 110px 0;
 }
+.flex{
+    display: flex;
+}
+/* 各コンテンツのタイトル */
+.content__title-box{
+    padding: 110px 0 60px;
+    text-align: center;
+}
+.content__title{
+    font-size: 60px;
+    color: var(--fc_purple);
+    letter-spacing: .2rem;
+    margin: 0 0 5px 0;
+}
+.content__text{
+    font-size: 22px;
+    color: var(--fc);
+    font-weight: bold;
+}
+/* --------- */
+
+/* ボタン */
 .btn{
     background: var(--btn_gra);
     text-align: center;
@@ -33,6 +57,7 @@ body{
     width: 230px;
     padding: 22.5px;
 }
+/* ------- */
 
 /* -----------header----- */
 .h__container{
@@ -126,3 +151,47 @@ body{
     font-size: 14px;
 }
 
+/* -----------about-------- */
+#about{
+    background-color: #141414;
+}
+.about__box__img{
+    background-image: url(../img/about.jpg);
+    width: 445px;
+    height: 650px;
+}
+.about__box__text{
+    padding: 90px 0 90px 70px;
+    max-width: 665px;
+}
+.about__theme{
+    font-size: 24px;
+    color: var(--fc);
+    font-weight: bold;
+    margin: 0 0 25px 0;
+}
+.about__title{
+    font-size: 48px;
+    color: var(--fc_purple);
+    margin: 0 0 50px 0;
+}
+.about__description{
+    font-size: 18px;
+    line-height: 2rem;
+    letter-spacing: .025rem;
+    color: var(--fc);
+    margin: 0 0 25px 0;
+}
+.about__list{
+    font-size: 16px;
+    line-height: 2rem;
+    letter-spacing: .05rem;
+    color: var(--fc);
+    margin: 0 0 25px 0;
+}
+.about__list__item{
+    display: flex;
+}
+.about__list__item__title{
+    margin: 0 20px 0 0;
+}
