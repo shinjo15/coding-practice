@@ -195,3 +195,74 @@ body{
 .about__list__item__title{
     margin: 0 20px 0 0;
 }
+
+/* -----------speaker-------- */
+#speaker{
+    background: var(--bg-gra);
+}
+.speaker__content-box{
+    display: flex;
+    gap: 60px;
+    margin: 0 0 60px;
+}
+.speaker__content-box__text{
+    max-width: 605px;
+}
+.speaker__name-en{
+    font-size: 42px;
+    color: var(--fc_purple);
+    letter-spacing: .1rem;
+    padding: 0 0 5px;
+}
+.speaker__name-ja{
+    font-size: 18px;
+    color: var(--fc);
+    margin: 0 0 30px;
+}
+.speaker__description{
+    font-size: 16px;
+    color: var(--fc);
+    line-height: 1.75rem;
+}
+.speaker__content-box__img{
+    width: 445px;
+    height: 460px;
+    background-position: center;
+    background-size: cover;
+}
+.sean{
+    background-image: url(../img/sean.jpg); 
+}
+.mihoko{
+    background-image: url(../img/mihoko.jpg); 
+}
+.jecica{
+    background-image: url(../img/jecica.jpg); 
+}
+
+/* --------------session----------- */
+#session{
+    background-color: #141414;
+}
+.session__plan{
+    display: flex;
+    padding: 45px 30px;
+    border-bottom: 1px solid var(--fc_purple);
+    gap: 140px;
+}
+.session__plan__time{
+    font-size: 22px;
+    color: var(--fc);
+}
+.session__plan__title{
+    font-size: 22px;
+    color: var(--fc_purple);
+    margin: 0 0 15px;
+}
+.session__plan__speaker, .session__plan__text{
+    font-size: 16px;
+    color: var(--fc);
+}
+.session__plan__speaker{
+    padding: 0 0 5px;
+}
