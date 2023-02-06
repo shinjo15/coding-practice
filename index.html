@@ -199,6 +199,51 @@
             </article>
         </div>
        </section>
+       <!--------- REGISTOR -------->
+       <section id="registor">
+        <div class="content__title-box">
+            <h2 class="content__title">REGISTOR</h2>
+            <p class="content__text">お申し込み</p>
+        </div>
+        <div class="registor__container">
+            <form action="" method="post">
+                <div class="registor__form-item">
+                    <label class="registor__label">ご職業<span class="registor__label__required">*必須</span></label>
+                    <label  class="radio-font"><input type="radio" name="job" value="1">会社員</label>
+                    <label  class="radio-font"><input type="radio" name="job" value="2" class="radio-font">個人事業主</label>
+                    <label  class="radio-font"><input type="radio" name="job" value="3" class="radio-font">求職中</label>
+                    <label  class="radio-font"><input type="radio" name="job" value="4" class="radio-font">その他</label>
+                </div>
+                <div class="registor__form-item">
+                    <label class="registor__label" for="name">お名前<span class="registor__label__required">*必須</span></label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="registor__form-item">
+                    <label class="registor__label" for="email">メールアドレス<span class="registor__label__required">*必須</span></label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="registor__form-item">
+                    <label class="registor__label" for="tel">電話番号<span class="registor__label__tel-detail">（半角数字ハイフンなし）</span></label>
+                    <input type="tel" name="tel" id="tel">
+                </div>
+                <div class="registor__form-item">
+                    <label class="registor__label" for="question">スピーカーに質問したいこと<span class="registor__label__required">*必須</span></label>
+                    <textarea name="question" id="question" cols="30" rows="10" placeholder="ご自由にお書きください" required></textarea>
+                </div>
+                <div class="registor__form-item">
+                    <label class="registor__label" for="where">WDCをどちらでお知りになりましたか？<span class="registor__label__required">*必須</span></label>
+                    <select name="where" id="where" required>
+                        <option value="">選択してください</option>
+                        <option value="1">広告</option>
+                        <option value="2">SNS</option>
+                        <option value="3">人に聞いた</option>
+                        <option value="4">その他</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn m_size">送信する</button>
+            </form>
+        </div>
+       </section>
     </main>
     <footer></footer>
 </body>
