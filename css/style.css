@@ -5,6 +5,9 @@
     --btn_bg:  #DD118E;
     --bg-gra: linear-gradient(135deg, #0E002E 0%, #1E092B 25%, #320C65 50%, #A01B7C 75%, #C21780 100%);
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Montserrat','Noto Serif JP Bold', sans-serif;
     font-feature-settings: "palt" 1;
@@ -289,10 +292,12 @@ body{
     letter-spacing: .1rem;
     display: block;
     padding: 0 0 10px;
+    margin: 0 30px 0 0;
 }
 .registor__label__required{
     font-size: 12px;
     color: var(--fc_purple);
+    padding: 0 0 0 30px;
 }
 .radio-font{
     font-size: 16px;
@@ -301,4 +306,38 @@ body{
 }
 .radio-font input{
     margin: 3px;
+}
+.form-control{
+    border-radius: 3px;
+    padding: 13px 27px;
+    width: 300px;
+}
+.textarea-control{
+    border-radius: 3px;
+    padding: 13px 27px;
+}
+
+/* --------------footer----------- */
+footer{
+    height: 160px;
+    background-color: #141414;
+    text-align: center;
+    color: var(--fc);
+    position: relative;
+}
+.footer__copy{
+    line-height: 160px;
+}
+.footer__link{
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--btn_gra);
+}
+.footer__icon-size{
+    font-size: 40px;
+    line-height: 80px;
 }

@@ -233,7 +233,7 @@ textarea {
   vertical-align: middle;
   color: inherit;
   font: inherit;
-  background: transparent;
+  /* background: transparent; */
   padding: 0;
   margin: 0;
   border-radius: 0;
