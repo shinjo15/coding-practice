@@ -319,7 +319,7 @@ body{
     line-height: 1.75rem;
 }
 .speaker__content-box__img{
-    width: 445px;
+    min-width: 445px;
     height: 460px;
     background-position: center;
     background-size: cover;
@@ -334,6 +334,27 @@ body{
     background-image: url(../img/jecica.jpg); 
 }
 
+/* -----------speaker @media screen and (max-width: 768px)----- */
+@media screen and (max-width: 768px){
+    .speaker__content-box{
+        gap: 40px;
+    }
+    .speaker__name-en{
+        font-size: 32px;
+    }
+    .speaker__name-ja{
+        font-size: 16px;margin: 0 0 20px;
+    }
+    .speaker__description{
+        font-size: 14px;
+        line-height: 1.25rem;
+    }
+    .speaker__content-box__img{
+        min-width: 311px;
+        height: 322px;
+    }
+}
+
 /* --------------session----------- */
 #session{
     background-color: #141414;
@@ -342,7 +363,10 @@ body{
     display: flex;
     padding: 45px 30px;
     border-bottom: 1px solid var(--fc_purple);
-    gap: 140px;
+    gap: 125px;
+}
+.session__plan__box-time{
+    min-width: 140px;
 }
 .session__plan__time{
     font-size: 22px;
@@ -361,12 +385,30 @@ body{
     padding: 0 0 5px;
 }
 
+/* -----------session @media screen and (max-width: 768px)----- */
+@media screen and (max-width: 768px){
+    .session__plan{
+        padding: 35px 25px;
+        gap: 90px;
+    }
+    .session__plan__time{
+        font-size: 20px;
+    }
+    .session__plan__title{
+        font-size: 20px;
+    }
+    .session__plan__speaker, .session__plan__text{
+        font-size: 14px;
+    }
+}
+
 /* --------------registor----------- */
 #registor{
     background-image: url(../img/リピートグリッド\ 3.jpg);
     padding: 0 0 110px;
 }
 .registor__container{
+    width: 95%;
     max-width: 970px;
     background-color: #1a1a1a;
     margin: 0 auto;
@@ -404,8 +446,17 @@ body{
     width: 300px;
 }
 .textarea-control{
+    width: 95%;
+    max-width: 600px;
     border-radius: 3px;
     padding: 13px 27px;
+}
+
+/* -----------registor @media screen and (max-width: 768px)----- */
+@media screen and (max-width: 768px){
+    .registor__container{
+        padding: 50px 60px;
+    }
 }
 
 /* --------------footer----------- */
