@@ -43,6 +43,7 @@ body{
 .btn{
     background: var(--btn_gra);
     text-align: center;
+    font-size: 16px;
     color: var(--fc);
     border-radius: 50px;
     box-shadow: 0 10px var(--btn_bg);
@@ -61,6 +62,29 @@ body{
     padding: 22.5px;
 }
 /* ------- */
+/* -----------各コンテンツで使用 @media screen and (max-width: 768px)----- */
+@media screen and (max-width: 768px){
+    .container{
+        padding: 0 20px 110px;
+    }
+    .content__title{
+        font-size: 48px;
+    }
+    .content__text{
+        font-size: 18px;
+    }
+    .btn{
+        font-size: 14px;
+    }
+    .m_size{
+        width: 200px;
+        padding: 20px;
+    }
+    .s_size{
+        width: 150px;
+        padding: 15px;
+    }
+}
 
 /* -----------header----- */
 .h__container{
@@ -95,6 +119,22 @@ body{
     text-align: center;
 }
 
+/* -----------header @media screen and (max-width: 768px)----- */
+@media screen and (max-width: 768px) {
+    .h__container{
+        height: 60px;
+        line-height: 60px;
+        padding: 0 20px;
+    }
+    .h__wdc{
+        font-size: 24px;
+        line-height: 60px;
+    }
+    .h_list__item{
+        font-size: 15px;
+        line-height: 60px;
+    }
+}
 /* -----------mv-------- */
 .mv{
     height: 700px;
@@ -154,6 +194,30 @@ body{
     font-size: 14px;
 }
 
+/* -----------mv @media screen and (max-width: 768px)----- */
+@media screen and (max-width: 768px){
+    .mv{
+        height: 600px;
+    }
+    .mv-container{
+        margin: 0 20px;
+        width: 100%;
+        display: block;
+    }
+    .mv__caption{
+        font-size: 20px;
+    }
+    .mv__title{
+        font-size: 70px;
+    }
+    .mv__time{
+        font-size: 28px;
+    }
+    .mv__box__img{
+        display: none;
+    }
+}
+
 /* -----------about-------- */
 #about{
     background-color: #141414;
@@ -197,6 +261,33 @@ body{
 }
 .about__list__item__title{
     margin: 0 20px 0 0;
+}
+
+/* -----------about @media screen and (max-width: 768px)----- */
+@media screen and (max-width: 768px){
+    .about__box__img{
+       width: 50%;
+       height: 390px;
+    }
+    .about__box__text{
+        width: 50%;
+        padding: 20px 0 30px 20px;
+    }
+    .about__theme{
+        font-size: 18px;
+        margin: 0 0 15px;
+    }
+    .about__title{
+        font-size: 32px;
+        margin: 0 0 15px;
+    }
+    .about__description{
+        font-size: 14px;
+    }
+    .about__list{
+        font-size: 13px;
+        line-height: 1.5rem;
+    }
 }
 
 /* -----------speaker-------- */
