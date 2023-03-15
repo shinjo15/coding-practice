@@ -178,8 +178,71 @@ body{
 
     &__continer{
         background-color: $cPink;
+        @extend .content-container;
+        padding: 40px 20px;
+    }
+
+    &__content{
+        display: none;
+    }
+
+    &__title{
+        font-size: 40px;
+        color: $cWhite;
+    }
+
+    &__title-jp{
+        font-size: 14px;
+        color: $cWhite;
+    }
+
+    &__switching{
+        display: flex;
+        width: 100%;
+
+        &__t, &__s{
+            font-size: 16px;
+            color: $cWhite;
+            height: 35px;
+            line-height: 35px;
+            margin-bottom: 20px;
+            text-align: center;
+            flex-basis: 50%;
+            text-decoration: none;
+
+            &.active{
+                border-bottom: 2px solid $cWhite;
+            }
+        }
+    }
+
+    &__card{
+        @extend .trainer-card;
+    }
+
+    &__img{
+        @extend .trainer-img;
+    }
+
+    &__description{
+        @extend .trainer-description;
     }
 }
+
+.staff{
+    &__card{
+        @extend .trainer-card;
+    }
+
+    &__img{
+        @extend .trainer-img;
+    }
+
+    &__description{
+        @extend .trainer-description;
+    }
+}
+
 
 // 背景のsvg
 .svg__content { 
@@ -191,3 +254,5 @@ body{
 .bottom{
     transform: translateY(-1px);
 }
+
+

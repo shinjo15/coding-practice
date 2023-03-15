@@ -1,4 +1,4 @@
-.content-container, .mv, .feature__card-container {
+.content-container, .mv, .feature__card-container, .trainer__continer {
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -20,6 +20,27 @@
   border-radius: 3%;
   background-color: #fff;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.trainer-card, .trainer__card, .staff__card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 3%;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.trainer-card:last-child, .trainer__card:last-child, .staff__card:last-child {
+  margin-bottom: 0;
+}
+
+.trainer-img, .trainer__img, .staff__img {
+  width: 100%;
+}
+
+.trainer-description, .trainer__description, .staff__description {
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  padding: 20px 20px 35px;
 }
 
 body {
@@ -165,8 +186,36 @@ body {
 }
 .trainer__continer {
   background-color: #EB51C2;
+  padding: 40px 20px;
 }
-
+.trainer__content {
+  display: none;
+}
+.trainer__title {
+  font-size: 40px;
+  color: #fff;
+}
+.trainer__title-jp {
+  font-size: 14px;
+  color: #fff;
+}
+.trainer__switching {
+  display: flex;
+  width: 100%;
+}
+.trainer__switching__t, .trainer__switching__s {
+  font-size: 16px;
+  color: #fff;
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+  flex-basis: 50%;
+  text-decoration: none;
+}
+.trainer__switching__t.active, .trainer__switching__s.active {
+  border-bottom: 2px solid #fff;
+}
 .svg__content {
   width: 100%;
 }

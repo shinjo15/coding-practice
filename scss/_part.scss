@@ -33,3 +33,24 @@ $md: 1025px;
     box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1);
 }
 
+// trainer-card
+.trainer-card{
+    width: 100%;
+    background-color: $cWhite;
+    border-radius: 3%;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.trainer-img{
+    width: 100%;
+}
+.trainer-description{
+    font-family: 'Noto Sans JP';
+    font-size: 14px;
+    padding: 20px 20px 35px;
+}
+
