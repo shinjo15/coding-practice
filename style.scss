@@ -168,6 +168,26 @@ body{
     }
 }
 
+
 .pink{
     color: $cPink;
+}
+
+.trainer{
+    margin-top: 55px;
+
+    &__continer{
+        background-color: $cPink;
+    }
+}
+
+// 背景のsvg
+.svg__content { 
+    width: 100%;
+}
+.top{
+    transform: translateY(1.5px);
+}
+.bottom{
+    transform: translateY(-1px);
 }

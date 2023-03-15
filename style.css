@@ -158,4 +158,23 @@ body {
 
 .pink {
   color: #EB51C2;
+}
+
+.trainer {
+  margin-top: 55px;
+}
+.trainer__continer {
+  background-color: #EB51C2;
+}
+
+.svg__content {
+  width: 100%;
+}
+
+.top {
+  transform: translateY(1.5px);
+}
+
+.bottom {
+  transform: translateY(-1px);
 }/*# sourceMappingURL=style.css.map */
