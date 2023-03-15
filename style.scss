@@ -1,1 +1,64 @@
-@use "part" as *;
+@use "scss/part" as *;
+
+body{
+    font-family: 'Josefin Sans', 'Noto Sans JP', sans-serif;
+}
+
+.header{
+    height: 60px;
+    width: 100%;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+
+
+    &__logo{
+        height: 20%;
+
+        & > img{
+            height: 100%;
+        }
+    }
+
+    & .btn{
+        @extend .btn;
+        height: 36px;
+        width: 186px;
+        font-size: 12px;
+        display: none;
+    }
+}
+
+.mv{
+    margin-top: 60px;
+    @extend .content-container;
+
+    &__title{
+        font-size: 42px;
+        font-weight: 400;
+        background-color: $cWhite;
+        font-style: italic;
+        line-height: 1em;
+
+        & > .pink{
+            font-size: 34px;
+            color: $cPink;
+        }
+    }
+
+    &__sub-title{
+        font-size: 13px;
+        background-color: $cWhite;
+    }
+
+    & .btn{
+        @extend .btn;
+        height: 45px;
+        width: 220px;
+    }
+}

@@ -1,0 +1,25 @@
+//-- 色 --
+$cPink: #EB51C2;
+$cGreen: #00B21B;
+$cBlack: #111111;
+$cWhite: #fff;
+
+// breakpoint
+$sp: 600px;
+$md: 1025px;
+
+.content-container{
+    margin: 0 auto;
+    padding: 0 20px;
+     
+}
+
+.btn{
+    font-size: 13px;
+    width: 300px;
+    height: 53px;
+    border: none;
+    border-radius: 30px;
+    background-color: $cPink;
+    color: $cWhite;
+}

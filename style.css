@@ -1,0 +1,65 @@
+.content-container, .mv {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn, .header .btn, .mv .btn {
+  font-size: 13px;
+  width: 300px;
+  height: 53px;
+  border: none;
+  border-radius: 30px;
+  background-color: #EB51C2;
+  color: #fff;
+}
+
+body {
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+}
+
+.header {
+  height: 60px;
+  width: 100%;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.header__logo {
+  height: 20%;
+}
+.header__logo > img {
+  height: 100%;
+}
+.header .btn {
+  height: 36px;
+  width: 186px;
+  font-size: 12px;
+  display: none;
+}
+
+.mv {
+  margin-top: 60px;
+}
+.mv__title {
+  font-size: 42px;
+  font-weight: 400;
+  background-color: #fff;
+  font-style: italic;
+  line-height: 1em;
+}
+.mv__title > .pink {
+  font-size: 34px;
+  color: #EB51C2;
+}
+.mv__sub-title {
+  font-size: 13px;
+  background-color: #fff;
+}
+.mv .btn {
+  height: 45px;
+  width: 220px;
+}/*# sourceMappingURL=style.css.map */
