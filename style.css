@@ -1,4 +1,4 @@
-.content-container, .mv, .feature__card-container, .trainer__continer {
+.content-container, .mv, .feature__card-container, .trainer__continer, .studio__container {
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -93,15 +93,7 @@ body {
   background-position: center;
   background-size: cover;
 }
-.mv__title {
-  font-size: 42px;
-  font-weight: 400;
-  background-color: #fff;
-  font-style: italic;
-  display: inline;
-  line-height: 1em;
-}
-.mv__title > span {
+.mv__title > .pink {
   font-size: 34px;
   padding: 0 4px;
 }
@@ -216,6 +208,18 @@ body {
 .trainer__switching__t.active, .trainer__switching__s.active {
   border-bottom: 2px solid #fff;
 }
+.studio__container {
+  height: 300px;
+}
+.studio__title {
+  font-size: 40px;
+  font-weight: 300;
+}
+.studio__title-jp {
+  font-size: 14px;
+  color: #EB51C2;
+}
+
 .svg__content {
   width: 100%;
 }
@@ -226,4 +230,73 @@ body {
 
 .bottom {
   transform: translateY(-1px);
+}
+
+.cover-slide {
+  position: relative;
+  display: inline-block;
+}
+.cover-slide::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #EB51C2;
+}
+.cover-slide.inview::after {
+  animation-name: kf-cover-slide;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.title-display {
+  font-size: 42px;
+  font-weight: 400;
+  height: 100%;
+  font-style: italic;
+  display: inline-block;
+  line-height: 1.1em;
+  vertical-align: bottom;
+  background-color: #fff;
+  opacity: 0;
+}
+.inview .title-display {
+  opacity: 1;
+  animation-name: kf-title-display;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes kf-cover-slide {
+  0% {
+    left: 0;
+    right: 100%;
+  }
+  50% {
+    left: 0;
+    right: 0;
+  }
+  100% {
+    left: 100%;
+    right: 0;
+  }
+}
+@keyframes kf-title-display {
+  0%, 50% {
+    opacity: 0;
+  }
+  50.1%, 100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

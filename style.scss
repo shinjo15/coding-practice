@@ -1,4 +1,5 @@
 @use "scss/part" as *;
+@use "scss/mixin" as *;
 
 body{
     font-family: 'Josefin Sans', 'Noto Sans JP', sans-serif;
@@ -60,14 +61,8 @@ body{
     }
 
     &__title{
-        font-size: 42px;
-        font-weight: 400;
-        background-color: $cWhite;
-        font-style: italic;
-        display: inline;
-        line-height: 1em;
 
-        & > span{
+        & > .pink{
             font-size: 34px;
             padding: 0 4px;
         }
@@ -243,6 +238,22 @@ body{
     }
 }
 
+.studio{
+    &__container{
+        height: 300px;
+        @extend .content-container;
+    }
+
+    &__title{
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    &__title-jp{
+        font-size: 14px;
+        color: $cPink;
+    }
+}
 
 // 背景のsvg
 .svg__content { 
@@ -253,6 +264,73 @@ body{
 }
 .bottom{
     transform: translateY(-1px);
+}
+
+
+// animation
+.cover-slide{
+    position: relative;
+    display: inline-block;
+    
+
+    &::after{
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: $cPink;
+    }
+
+    &.inview{
+        &::after{
+            @include animation($name: kf-cover-slide);
+        }
+    }
+}
+
+.title-display{
+    font-size: 42px;
+    font-weight: 400;
+    height: 100%;
+    font-style: italic;
+    display: inline-block;
+    line-height: 1.1em;
+    vertical-align: bottom;
+    background-color: $cWhite;
+    opacity: 0;
+
+    .inview &{
+        opacity: 1;
+        @include animation($name: kf-title-display);
+    }
+
+}
+
+@keyframes kf-cover-slide{
+    0%{
+        left: 0;
+        right: 100%;
+    }
+    50%{
+        left: 0;
+        right: 0;
+    }
+    100%{
+        left: 100%;
+        right: 0; 
+    }
+}
+
+@keyframes kf-title-display{
+    0%,50%{
+        opacity: 0;
+    }
+    50.1%, 100%{
+        opacity: 1;
+    }
 }
 
 
