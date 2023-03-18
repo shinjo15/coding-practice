@@ -8,7 +8,7 @@ body{
 .header{
     height: 60px;
     width: 100%;
-    margin: 0 20px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,8 +17,6 @@ body{
     top: 0;
     left: 0;
     
-
-
     &__logo{
         height: 20%;
 
@@ -33,6 +31,18 @@ body{
         width: 186px;
         font-size: 12px;
         display: none;
+    }
+
+    &.h-scroll{
+        background-color: $cWhite;
+        opacity: 0;
+        @include animation(
+            $name: kf-h-scroll
+        );
+
+        & .btn{
+            display: block;
+        }
     }
 }
 
@@ -328,6 +338,15 @@ body{
         opacity: 0;
     }
     50.1%, 100%{
+        opacity: 1;
+    }
+}
+
+@keyframes kf-h-scroll {
+    0%{
+        opacity: 0;
+    }
+    100%{
         opacity: 1;
     }
 }

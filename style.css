@@ -50,7 +50,7 @@ body {
 .header {
   height: 60px;
   width: 100%;
-  margin: 0 20px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,6 +70,20 @@ body {
   width: 186px;
   font-size: 12px;
   display: none;
+}
+.header.h-scroll {
+  background-color: #fff;
+  opacity: 0;
+  animation-name: kf-h-scroll;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+.header.h-scroll .btn {
+  display: block;
 }
 
 .mv {
@@ -296,6 +310,14 @@ body {
     opacity: 0;
   }
   50.1%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes kf-h-scroll {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */
