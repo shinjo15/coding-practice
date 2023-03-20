@@ -128,7 +128,15 @@ body{
 
     &__card-container{
         @extend .content-container;
-        margin-bottom: 35px
+        margin-bottom: 35px;
+        opacity: 0;
+
+        &.inview{
+            @include animation(
+                $name: kf-fade-in-feature,
+                $delay: 0.2s
+            );
+        }
     }
 
     &__card{
@@ -180,6 +188,7 @@ body{
 
 .trainer{
     margin-top: 55px;
+    position: relative;
 
     &__continer{
         background-color: $cPink;
@@ -189,6 +198,15 @@ body{
 
     &__content{
         display: none;
+        opacity: 0;
+
+        &.active{
+            display: block;
+            @include animation(
+                $name: kf-fade-in-trainer,
+                $delay: 0.2s
+            );
+        }
     }
 
     &__title{
@@ -208,6 +226,8 @@ body{
         &__t, &__s{
             font-size: 16px;
             color: $cWhite;
+            background: none;
+            border: none;
             height: 35px;
             line-height: 35px;
             margin-bottom: 20px;
@@ -235,6 +255,19 @@ body{
 }
 
 .staff{
+    &__content{
+        display: none;
+        opacity: 0;
+
+        &.active{
+            display: block;
+            @include animation(
+                $name: kf-fade-in-trainer,
+                $delay: 0.2s
+            );
+        }
+    }
+
     &__card{
         @extend .trainer-card;
     }
@@ -347,6 +380,28 @@ body{
         opacity: 0;
     }
     100%{
+        opacity: 1;
+    }
+}
+
+@keyframes kf-fade-in-feature {
+    0%{
+        transform: translateY(10%);
+        opacity: 0;
+    }
+    100%{
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes kf-fade-in-trainer {
+    0%{
+        transform: translateY(5%);
+        opacity: 0;
+    }
+    100%{
+        transform: none;
         opacity: 1;
     }
 }

@@ -8,7 +8,7 @@
 // trainer.addEventListener('click', toggleactive(this));
 // staff.addEventListener('click', toggleactive(this));
 
-
+// headerのスクロールオブザーバー
 const title = document.querySelector('.mv__title');
 const header = document.querySelector('.header');
 
@@ -30,3 +30,52 @@ const option = {
 
 const io = new IntersectionObserver(headerBg, option);
 io.observe(title);
+
+
+//feature__card-containerのスクロールオブザーバー
+const training = document.querySelector('.feature__img__training');
+const food = document.querySelector('.feature__img__food');
+const card = document.querySelectorAll('.feature__card-container');
+
+
+const featureCard = function(entries, observer){
+    entries.forEach(entry =>{
+        if(entry.isIntersecting){
+            card.forEach(el =>el.classList.add('inview'));
+            console.log("card-in");
+            observer.unobserve(entry.target);
+        } else{
+            card.forEach(el =>el.classList.remove('inview'));
+            console.log("card-out");
+        }
+    });
+}
+
+const io2 = new IntersectionObserver(featureCard);
+io2.observe(training);
+io2.observe(food);
+
+
+//trainerの画面切り替え
+const trainer = document.querySelector('.trainer__switching__t');
+const staff = document.querySelector('.trainer__switching__s');
+const trainerContent = document.querySelector('.trainer__content');
+const staffContent = document.querySelector('.staff__content');
+
+function displayTrainer(){
+    trainer.classList.add('active');
+    staff.classList.remove('active');
+    trainerContent.classList.add('active');
+    staffContent.classList.remove('active');
+}
+
+function displayStaff(){
+    staff.classList.add('active');
+    trainer.classList.remove('active');
+    staffContent.classList.add('active');
+    trainerContent.classList.remove('active');
+}
+
+trainer.addEventListener('click', displayTrainer);
+staff.addEventListener('click', displayStaff);
+
