@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,500&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <meta propaty="og:url" content="#">
     <meta propaty="og:title" content="engbody">
     <meta propaty="og:description" content="Hey, guys! 英語を話している時ってなんだかテンションが上りませんか？
@@ -97,7 +98,7 @@
                 <h2 class="trainer__title">Our Trainer</h2>
                 <p class="trainer__title-jp">トレーナー</p>
                 <div class="trainer__switching">
-                    <button class="trainer__switching__t">トレーナー</button>
+                    <button class="trainer__switching__t active">トレーナー</button>
                     <button class="trainer__switching__s">スタッフ</button>
                 </div>
                 <div class="trainer__content active">
@@ -168,6 +169,20 @@
             <div class="studio__container">
                 <h2 class="studio__title">Studio</h2>
                 <p class="studio__title-jp">スタジオ</p>
+                <!-- スライダーのコンテナ -->
+                <div class="swiper-container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                        <!-- スライド -->
+                            <div class="swiper-slide"><img src="img/studio01.png" alt=""></div>
+                            <div class="swiper-slide"><img src="img/studio02.png" alt=""></div>
+                            <div class="swiper-slide"><img src="img/studio03.png" alt=""></div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 25" class="svg__content top">
                 <path id="wave" d="M375,240.667l-20.833,1.38c-20.833,1.484-62.5,4.089-104.167,1.406-41.667-2.786-83.333-11.12-125-15.286S41.667,224,20.833,224H0v25H375Z" transform="translate(0 -224)" fill="#eb51c2"/>
@@ -175,6 +190,7 @@
         </section>
     </main>
     <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

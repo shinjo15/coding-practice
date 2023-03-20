@@ -11,8 +11,12 @@ $md: 1025px;
 .content-container{
     margin: 0 auto;
     padding: 0 20px;
-     
+
+    &__pg-lg{
+        padding: 0 30px;
+    }
 }
+
 
 .btn{
     font-size: 13px;
