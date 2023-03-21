@@ -58,3 +58,16 @@ $md: 1025px;
     padding: 20px 20px 35px;
 }
 
+.slide-btn{
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: 50%;
+    background-color: $cWhite;
+}
+
+.slide-btn-after{
+    font-size: 10px !important;
+    font-weight: 700;
+    color: $cPink;
+}
+

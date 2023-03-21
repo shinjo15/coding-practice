@@ -296,6 +296,116 @@ body{
         font-size: 14px;
         color: $cPink;
     }
+
+    // slider のスタイル
+    & .swiper-container{
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    & .swiper-container .swiper-pagination{
+        bottom: -30px!important;
+    }
+    & .sample-slider img{
+        width: 100%;
+    }
+
+    & .swiper-pagination-bullet {
+        margin: 0 0 0 10px !important;
+        background: #333 !important;
+
+        &-active{
+            background: $cPink !important;
+        }
+    }
+  
+    & .swiper-pagination-bullet:first-child {
+        margin: 0 !important;
+    }
+
+    & .swiper-button-prev{
+        left: -17px !important;
+        @extend .slide-btn;
+
+        &::after{
+            @extend .slide-btn-after;
+        }
+    }
+
+    & .swiper-button-next{
+        right: -17px !important;
+        @extend .slide-btn;
+
+        &::after{
+            @extend .slide-btn-after;
+        }
+    }
+}
+
+.price{
+    &__title-container{
+        @extend .content-container__pg-lg;
+        background-color: $cPink;
+        padding-bottom: 25px;
+    }
+
+    &__container{
+        @extend .content-container;
+        background-color: $cPink;
+        padding-bottom: 25px;
+    }
+
+    &__title{
+        @extend .studio__title;
+        color: $cWhite;
+    }
+
+    &__title-jp{
+        @extend .studio__title-jp;
+        color: $cWhite;
+    }
+
+    &__card{
+        width: 320px;
+        padding: 40px 20px 0;
+        border-radius: 8px;
+        background-color: $cWhite;
+        text-align: center;
+
+        &__title{
+            font-size: 26px;
+            font-weight: 700;
+            color: $cPink;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__payment{
+        font-size: 48px;
+    }
+
+    &__box{
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.5);
+
+        &:first-child{
+            padding: 0 0 20px;
+        }
+        &:last-child{
+            border-bottom: none;
+        }
+
+        &__title{
+            font-size: 18px;
+            margin-bottom: 5px;
+    
+            &__details{
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
 }
 
 // 背景のsvg
@@ -309,34 +419,6 @@ body{
     transform: translateY(-1px);
 }
 
-
-
-.swiper-container{
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.swiper-container .swiper-pagination{
-    bottom: -30px!important;
-}
-.sample-slider img{
-    width: 100%;
-}
-
-.swiper-pagination-bullet {
-    margin: 0 0 0 10px !important;
-    background: #333 !important;
-
-    &-active{
-        background: $cPink !important;
-    }
-  }
-  
-  .swiper-pagination-bullet:first-child {
-    margin: 0 !important;
-  }
-  
 
 
 // animation
