@@ -319,8 +319,11 @@ body {
   padding-bottom: 25px;
 }
 .price__container {
+  width: 100%;
   background-color: #EB51C2;
   padding-bottom: 25px;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 .price__title {
   color: #fff;
@@ -331,15 +334,25 @@ body {
 .price__card {
   width: 320px;
   padding: 40px 20px 0;
+  margin-left: 20px;
   border-radius: 8px;
   background-color: #fff;
   text-align: center;
+  display: inline-block;
+  position: relative;
+}
+.price__card:first-child {
+  margin-left: 0;
 }
 .price__card__title {
   font-size: 26px;
   font-weight: 700;
   color: #EB51C2;
   margin-bottom: 10px;
+}
+.price__recommendation {
+  position: absolute;
+  top: -25px;
 }
 .price__payment {
   font-size: 48px;

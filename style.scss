@@ -352,8 +352,11 @@ body{
 
     &__container{
         @extend .content-container;
+        width: 100%;
         background-color: $cPink;
         padding-bottom: 25px;
+        white-space: nowrap;
+        overflow-x: auto;
     }
 
     &__title{
@@ -369,9 +372,16 @@ body{
     &__card{
         width: 320px;
         padding: 40px 20px 0;
+        margin-left: 20px;
         border-radius: 8px;
         background-color: $cWhite;
         text-align: center;
+        display: inline-block;
+        position: relative;
+
+        &:first-child{
+            margin-left: 0;
+        }
 
         &__title{
             font-size: 26px;
@@ -379,6 +389,11 @@ body{
             color: $cPink;
             margin-bottom: 10px;
         }
+    }
+
+    &__recommendation{
+        position: absolute;
+        top: -25px;
     }
 
     &__payment{
