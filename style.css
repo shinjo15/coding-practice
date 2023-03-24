@@ -324,12 +324,37 @@ body {
   padding-bottom: 25px;
   white-space: nowrap;
   overflow-x: auto;
+  position: relative;
 }
 .price__title {
   color: #fff;
 }
 .price__title-jp {
   color: #fff;
+}
+.price__scroll {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 5%;
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+}
+.price__scroll > .size {
+  font-size: 45px;
+}
+.price__scroll__text {
+  font-size: 12px;
+  margin-top: -10px;
+}
+.price__scroll .active {
+  opacity: 1;
 }
 .price__card {
   width: 320px;
@@ -340,6 +365,7 @@ body {
   text-align: center;
   display: inline-block;
   position: relative;
+  z-index: 0;
 }
 .price__card:first-child {
   margin-left: 0;
@@ -353,6 +379,16 @@ body {
 .price__recommendation {
   position: absolute;
   top: -25px;
+  left: 50%;
+  width: 80%;
+  font-size: 20px;
+  font-weight: 700;
+  color: #EB51C2;
+  background-color: #fff;
+  padding: 7px;
+  border-radius: 25px;
+  border: 2px solid #EB51C2;
+  transform: translateX(-50%);
 }
 .price__payment {
   font-size: 48px;
@@ -361,7 +397,7 @@ body {
   padding: 20px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
-.price__box:first-child {
+.price__box.price {
   padding: 0 0 20px;
 }
 .price__box:last-child {

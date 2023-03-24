@@ -93,3 +93,28 @@ const swiper = new Swiper(".swiper", {
         prevEl: ".swiper-button-prev"
       }
 });
+
+//price__scrollのスクロールオブザーバー
+const priceScroll = document.querySelector('.price__scroll');
+const priceCard = document.querySelector('.price__card');
+
+
+const priceCb = function(entries, observer){
+    entries.forEach(entry =>{
+        if(entry.isIntersecting){
+            priceScroll.classList.add('active');
+            console.log("scroll-in");
+            // observer.unobserve(entry.target);
+        } else{
+            priceScroll.classList.remove('active');
+            console.log("scroll-out");
+        }
+    });
+}
+
+const option2 = {
+    rootMargin: "-600px 0px 0px -320px",
+}
+
+const io4 = new IntersectionObserver(priceCb, option2);
+io4.observe(priceCard);
