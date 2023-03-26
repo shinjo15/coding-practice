@@ -1,9 +1,20 @@
-.content-container, .mv, .feature__card-container, .trainer__continer, .price__container {
+.content-container, .mv, .feature__card-container, .price__container {
   margin: 0 auto;
   padding: 0 20px;
 }
-.content-container__pg-lg, .studio__container, .price__title-container {
-  padding: 0 30px;
+.content-container__pg-lg, .trainer__continer, .studio__container, .price__title-container, .faq__container {
+  padding: 40px 30px;
+}
+
+.content__title, .trainer__title, .studio__title, .price__title, .faq__title {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.content__title-jp, .trainer__title-jp, .studio__title-jp, .price__title-jp, .faq__title-jp {
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 30px;
 }
 
 .btn, .header .btn, .mv .btn {
@@ -219,7 +230,6 @@ body {
 }
 .trainer__continer {
   background-color: #EB51C2;
-  padding: 40px 20px;
 }
 .trainer__content {
   display: none;
@@ -236,11 +246,9 @@ body {
   animation-fill-mode: forwards;
 }
 .trainer__title {
-  font-size: 40px;
   color: #fff;
 }
 .trainer__title-jp {
-  font-size: 14px;
   color: #fff;
 }
 .trainer__switching {
@@ -277,14 +285,9 @@ body {
   animation-fill-mode: forwards;
 }
 .studio__container {
-  padding-bottom: 25px;
+  background-color: #fff;
 }
-.studio__title, .price__title {
-  font-size: 40px;
-  font-weight: 300;
-}
-.studio__title-jp, .price__title-jp {
-  font-size: 14px;
+.studio__title-jp {
   color: #EB51C2;
 }
 .studio .swiper-container {
@@ -315,13 +318,13 @@ body {
   right: -17px !important;
 }
 .price__title-container {
+  padding-bottom: 0;
   background-color: #EB51C2;
-  padding-bottom: 25px;
 }
 .price__container {
   width: 100%;
   background-color: #EB51C2;
-  padding-bottom: 25px;
+  padding: 25px 0;
   white-space: nowrap;
   overflow-x: auto;
   position: relative;
@@ -330,6 +333,7 @@ body {
   color: #fff;
 }
 .price__title-jp {
+  padding-bottom: 5px;
   color: #fff;
 }
 .price__scroll {
@@ -344,7 +348,6 @@ body {
   border-radius: 5%;
   text-align: center;
   z-index: 2;
-  opacity: 0;
 }
 .price__scroll > .size {
   font-size: 45px;
@@ -410,6 +413,45 @@ body {
 .price__box__title__details {
   font-size: 16px;
   font-weight: 700;
+}
+
+.faq__title-jp {
+  color: #EB51C2;
+}
+.faq__article {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.faq__question__title {
+  font-size: 15px;
+}
+.faq__question__button {
+  background: none;
+  border: none;
+  line-height: 100%;
+}
+.faq__question__button > span {
+  color: #EB51C2;
+  font-weight: 700;
+}
+.faq__answer {
+  display: flex;
+  padding-bottom: 20px;
+  font-size: 15px;
+}
+.faq__answer__text {
+  margin-top: 10px;
+  font-size: 15px;
+}
+.faq__Q, .faq__A {
+  font-size: 26px;
+  font-weight: 700;
+  color: #EB51C2;
+  margin-right: 15px;
 }
 
 .svg__content {

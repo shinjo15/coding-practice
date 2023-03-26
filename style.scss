@@ -192,8 +192,7 @@ body{
 
     &__continer{
         background-color: $cPink;
-        @extend .content-container;
-        padding: 40px 20px;
+        @extend .content-container__pg-lg;
     }
 
     &__content{
@@ -210,12 +209,12 @@ body{
     }
 
     &__title{
-        font-size: 40px;
+        @extend .content__title;
         color: $cWhite;
     }
 
     &__title-jp{
-        font-size: 14px;
+        @extend .content__title-jp;
         color: $cWhite;
     }
 
@@ -284,16 +283,15 @@ body{
 .studio{
     &__container{
         @extend .content-container__pg-lg;
-        padding-bottom: 25px;
+        background-color: $cWhite;
     }
 
     &__title{
-        font-size: 40px;
-        font-weight: 300;
+        @extend .content__title;
     }
 
     &__title-jp{
-        font-size: 14px;
+        @extend .content__title-jp;
         color: $cPink;
     }
 
@@ -346,27 +344,28 @@ body{
 .price{
     &__title-container{
         @extend .content-container__pg-lg;
-        background-color: $cPink;
-        padding-bottom: 25px;
+        padding-bottom: 0;
+        background-color: $cPink; 
     }
 
     &__container{
         @extend .content-container;
         width: 100%;
         background-color: $cPink;
-        padding-bottom: 25px;
+        padding: 25px 0;
         white-space: nowrap;
         overflow-x: auto;
         position: relative;
     }
 
     &__title{
-        @extend .studio__title;
+        @extend .content__title;
         color: $cWhite;
     }
 
     &__title-jp{
-        @extend .studio__title-jp;
+        @extend .content__title-jp;
+        padding-bottom: 5px;
         color: $cWhite;
     }
 
@@ -382,7 +381,6 @@ body{
         border-radius: 5%;
         text-align: center;
         z-index: 2;
-        opacity: 0;
 
         & > .size{
             font-size: 45px;
@@ -460,6 +458,63 @@ body{
                 font-weight: 700;
             }
         }
+    }
+}
+
+.faq{
+    &__container{
+        @extend .content-container__pg-lg;
+    }
+
+    &__title{
+        @extend .content__title;
+    }
+
+    &__title-jp{
+        @extend .content__title-jp;
+        color: $cPink;
+    }
+
+    &__article{
+        border-bottom: 1px solid rgba(0,0,0,0.3);
+    }
+
+    &__question{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+
+        &__title{
+            font-size: 15px;
+        }
+
+        &__button{
+            background: none;
+            border: none;
+            line-height: 100%;
+            & > span{
+                color: $cPink;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__answer{
+        display: flex;
+        padding-bottom: 20px;
+        font-size: 15px;
+
+        &__text{
+            margin-top: 10px;
+            font-size: 15px;
+        }
+    }
+
+    &__Q, &__A{
+        font-size: 26px;
+        font-weight: 700;
+        color: $cPink;
+        margin-right: 15px;
     }
 }
 
