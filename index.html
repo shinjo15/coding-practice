@@ -269,24 +269,59 @@
             <div class="faq__container">
                 <h2 class="faq__title">FAQ</h2>
                 <p class="faq__title-jp">よくある質問</p>
-                <div class="faq__item">
-                    <article class="faq__article">
-                        <div class="faq__question">
-                            <h4 class="faq__question__title"><span class="faq__Q">Q</span>見学や体験は可能ですか？</h4>
-                            <button class="faq__question__button">
-                                <span class="material-symbols-outlined">
-                                    expand_more
-                                    </span>
-                            </button>
-                        </div>
-                        <div class="faq__answer">
-                            <span class="faq__A">A</span>
-                            <p class="faq__answer__text">
-                                無料カウンセリングの際に見学が可能です。フォームに見学・体験希望の欄がございますので内容をご確認しチェックを入れてください。
-                            </p>
-                        </div>
-                    </article>
-                </div>
+                <dl class="faq__accordion js-accordion">
+                    <!-- アコーディオン1 -->
+                    <div class="faq__accordion__item js-accordion-trigger">
+                      <dt class="faq__accordion__title">
+                        <h4 class="faq__question__title"><span class="faq__Q">Q</span>見学や体験は可能ですか？</h4>
+                        <button class="faq__question__button">
+                            <span class="material-symbols-outlined">
+                                expand_more
+                                </span>
+                        </button>
+                      </dt>
+                      <dd class="faq__accordion__content">
+                        <span class="faq__A">A</span>
+                        <p class="faq__answer">
+                            無料カウンセリングの際に見学が可能です。フォームに見学・体験希望の欄がございますので内容をご確認しチェックを入れてください。
+                        </p>
+                      </dd>
+                    </div>
+                    <!-- アコーディオン2 -->
+                    <div class="faq__accordion__item js-accordion-trigger">
+                        <dt class="faq__accordion__title">
+                          <h4 class="faq__question__title"><span class="faq__Q">Q</span>用意するものは何がありますか？</h4>
+                          <button class="faq__question__button">
+                              <span class="material-symbols-outlined">
+                                  expand_more
+                                  </span>
+                          </button>
+                        </dt>
+                        <dd class="faq__accordion__content">
+                          <span class="faq__A">A</span>
+                          <p class="faq__answer">
+                            シューズをご持参ください。ウェアとタオルは無料でレンタルが可能です。
+                          </p>
+                        </dd>
+                      </div>
+                      <!-- アコーディオン3 -->
+                      <div class="faq__accordion__item js-accordion-trigger">
+                        <dt class="faq__accordion__title">
+                          <h4 class="faq__question__title"><span class="faq__Q">Q</span>シャワールームはありますか？</h4>
+                          <button class="faq__question__button">
+                              <span class="material-symbols-outlined">
+                                  expand_more
+                                  </span>
+                          </button>
+                        </dt>
+                        <dd class="faq__accordion__content">
+                          <span class="faq__A">A</span>
+                          <p class="faq__answer">
+                            5つのシャワールームがございます。ボディソープ・シャンプー・リンスなどのアメニティやドライヤーもご用意しております。
+                          </p>
+                        </dd>
+                      </div>
+                  </dl>
             </div>
         </section>
     </main>
