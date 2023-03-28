@@ -2,7 +2,7 @@
   margin: 0 auto;
   padding: 0 20px;
 }
-.content-container__pg-lg, .trainer__continer, .studio__container, .price__title-container, .faq__container {
+.content-container__pg-lg, .trainer__continer, .studio__container, .price__title-container, .faq__container, .cta__body {
   padding: 40px 30px;
 }
 
@@ -17,15 +17,18 @@
   padding-bottom: 30px;
 }
 
-.btn, .header .btn, .mv .btn {
+.btn, .header .btn, .mv .btn, .cta__button, .header .cta__button {
   font-size: 13px;
   width: 300px;
   height: 53px;
   border: none;
-  font-weight: 400;
   border-radius: 30px;
   background-color: #EB51C2;
+}
+.btn > a, .header .btn > a, .mv .btn > a, .cta__button > a, .header .cta__button > a {
   color: #fff;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .card, .feature__card__training, .feature__card__food {
@@ -92,7 +95,7 @@ body {
 .header__logo > img {
   height: 100%;
 }
-.header .btn {
+.header .btn, .header .cta__button {
   height: 36px;
   width: 186px;
   font-size: 12px;
@@ -100,16 +103,11 @@ body {
 }
 .header.h-scroll {
   background-color: #fff;
-  opacity: 0;
-  animation-name: kf-h-scroll;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
+  opacity: 1;
+  transition: opacity, background-color, 0.5s;
+  animation-play-state: paused;
 }
-.header.h-scroll .btn {
+.header.h-scroll .btn, .header.h-scroll .cta__button {
   display: block;
 }
 
@@ -145,7 +143,7 @@ body {
   display: inline-block;
   padding-right: 15%;
 }
-.mv .btn {
+.mv .btn, .mv .cta__button {
   height: 45px;
   width: 220px;
   margin-top: 15px;
@@ -215,7 +213,7 @@ body {
   line-height: 1.5em;
   margin-top: 25px;
 }
-.feature .btn {
+.feature .btn, .feature .cta__button {
   display: block;
   margin: 0 auto;
 }
@@ -324,7 +322,8 @@ body {
 .price__container {
   width: 100%;
   background-color: #EB51C2;
-  padding: 25px 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
   white-space: nowrap;
   overflow-x: auto;
   position: relative;
@@ -348,6 +347,8 @@ body {
   border-radius: 5%;
   text-align: center;
   z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 .price__scroll > .size {
   font-size: 45px;
@@ -356,7 +357,7 @@ body {
   font-size: 12px;
   margin-top: -10px;
 }
-.price__scroll .active {
+.price__scroll.active {
   opacity: 1;
 }
 .price__card {
@@ -370,7 +371,7 @@ body {
   position: relative;
   z-index: 0;
 }
-.price__card:first-child {
+.price__card:nth-of-type(1) {
   margin-left: 0;
 }
 .price__card__title {
@@ -430,7 +431,6 @@ body {
   padding: 20px 0;
 }
 .faq__accordion__content {
-  display: flex;
   justify-content: space-between;
   padding: 0 0 20px;
   display: none;
@@ -455,11 +455,52 @@ body {
   margin-top: 10px;
   font-size: 15px;
 }
+.faq__answer-box {
+  display: flex;
+}
 .faq__Q, .faq__A {
   font-size: 26px;
   font-weight: 700;
   color: #EB51C2;
   margin-right: 15px;
+}
+
+.cta__img {
+  background-image: url(img/pc_cta.png);
+  height: 180px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cta__body {
+  background-color: #EB51C2;
+}
+.cta__content {
+  text-align: center;
+}
+.cta__text {
+  color: #fff;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.cta__button {
+  background-color: #fff;
+}
+.cta__button > a {
+  color: #EB51C2;
+}
+
+.footer {
+  background-color: #111111;
+}
+.footer__logo {
+  padding: 50px 20px;
+  display: block;
+  text-align: center;
+}
+.footer__logo > a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .svg__content {

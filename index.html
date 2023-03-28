@@ -30,7 +30,7 @@
         <div class="header__logo">
             <img src="img/logo.png" alt="ENG BODY">
         </div>
-        <button class="btn">無料カウンセリングを受ける</button>
+        <button class="btn"><a href="#">無料カウンセリングを受ける</a></button>
     </header>
     <main>
         <section class="mv">
@@ -40,7 +40,7 @@
                     <span class="cover-slide inview"><span class="title-display"><span class="pink">&amp;</span>English</span></span>
                 </h1>
                 <p class="mv__sub-title">英会話＆パーソナルトレーニングジム</p>
-                <button class="btn">無料カウンセリングを受ける</button>
+                <button class="btn"><a href="#">無料カウンセリングを受ける</a></button>
             </div>
             <div class="slogan">
                 <h2 class="slogan__title">YOU CAN DO IT!</h2>
@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn">無料カウンセリングを受ける</button>
+            <button class="btn"><a href="#">無料カウンセリングを受ける</a></button>
         </section>
         <section class="trainer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 25" class="svg__content top">
@@ -281,10 +281,12 @@
                         </button>
                       </dt>
                       <dd class="faq__accordion__content">
-                        <span class="faq__A">A</span>
-                        <p class="faq__answer">
-                            無料カウンセリングの際に見学が可能です。フォームに見学・体験希望の欄がございますので内容をご確認しチェックを入れてください。
-                        </p>
+                        <div class="faq__answer-box">
+                            <span class="faq__A">A</span>
+                            <p class="faq__answer">
+                                無料カウンセリングの際に見学が可能です。フォームに見学・体験希望の欄がございますので内容をご確認しチェックを入れてください。
+                            </p>
+                        </div>
                       </dd>
                     </div>
                     <!-- アコーディオン2 -->
@@ -298,10 +300,12 @@
                           </button>
                         </dt>
                         <dd class="faq__accordion__content">
-                          <span class="faq__A">A</span>
-                          <p class="faq__answer">
-                            シューズをご持参ください。ウェアとタオルは無料でレンタルが可能です。
-                          </p>
+                            <div class="faq__answer-box">
+                                <span class="faq__A">A</span>
+                                <p class="faq__answer">
+                                  シューズをご持参ください。ウェアとタオルは無料でレンタルが可能です。
+                                </p>
+                            </div>
                         </dd>
                       </div>
                       <!-- アコーディオン3 -->
@@ -315,17 +319,32 @@
                           </button>
                         </dt>
                         <dd class="faq__accordion__content">
-                          <span class="faq__A">A</span>
-                          <p class="faq__answer">
-                            5つのシャワールームがございます。ボディソープ・シャンプー・リンスなどのアメニティやドライヤーもご用意しております。
-                          </p>
+                            <div class="faq__answer-box">
+                                <span class="faq__A">A</span>
+                                <p class="faq__answer">
+                                  5つのシャワールームがございます。ボディソープ・シャンプー・リンスなどのアメニティやドライヤーもご用意しております。
+                                </p>
+                            </div>
                         </dd>
                       </div>
                   </dl>
             </div>
         </section>
+        <div class="cta">
+            <figure class="cta__img"></figure>
+            <div class="cta__body">
+                <div class="cta__content">
+                    <p class="cta__text">Come join us!! 😊</p>
+                    <button class="cta__button"><a href="#">無料カウンセリングを受ける</a></button>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <div class="footer__logo">
+            <a href="#"><img src="" alt="">ENGBODY</a>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>

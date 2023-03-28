@@ -96,7 +96,7 @@ const swiper = new Swiper(".swiper", {
 
 //price__scrollのスクロールオブザーバー
 const priceScroll = document.querySelector('.price__scroll');
-const priceCard = document.querySelector('.price__container');
+const priceCard = document.querySelector('.price__card');
 
 function scrollX(){
     if(priceCard.scrollLeft() > 20){
@@ -104,25 +104,25 @@ function scrollX(){
     };
 };
 
-// const priceCb = function(entries, observer){
-//     entries.forEach(entry =>{
-//         if(entry.isIntersecting){
-//             priceScroll.classList.add('active');
-//             console.log("scroll-in");
-//             observer.unobserve(entry.target);
-//         } else{
-//             priceScroll.classList.remove('active');
-//             console.log("scroll-out");
-//         }
-//     });
-// }
+const priceCb = function(entries, observer){
+    entries.forEach(entry =>{
+        if(entry.isIntersecting){
+            priceScroll.classList.add('active');
+            console.log("scroll-in");
+        } else{
+            priceScroll.classList.remove('active');
+            console.log("scroll-out");
+            // observer.unobserve(entry.target);
+        }
+    });
+}
 
-// const option2 = {
-//     rootMargin: "-600px 0px 0px -320px",
-// }
+const option2 = {
+    rootMargin: "0px 0px 0px -320px",
+}
 
-// const io4 = new IntersectionObserver(priceCb, option2);
-// io4.observe(priceCard);
+const io4 = new IntersectionObserver(priceCb, option2);
+io4.observe(priceCard);
 
 
 /* =================================================== */
