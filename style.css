@@ -73,6 +73,10 @@
   color: #EB51C2;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
 }
@@ -149,6 +153,11 @@ body {
   margin-top: 15px;
 }
 
+@media screen and (min-width: 600px) {
+  .mv__content::after {
+    height: 500px;
+  }
+}
 .slogan {
   margin-top: 10px;
 }
@@ -172,6 +181,17 @@ body {
   line-height: 1.8em;
 }
 
+@media screen and (min-width: 600px) {
+  .slogan {
+    margin-top: 90px;
+  }
+  .slogan__title > br {
+    display: none;
+  }
+  .slogan__discription {
+    text-align: center;
+  }
+}
 .feature {
   margin-top: 30px;
 }
@@ -194,12 +214,13 @@ body {
 .feature__card__training, .feature__card__food {
   transform: translateY(-5px);
 }
-.feature__title__training {
+.feature__title {
   font-size: 18px;
+}
+.feature__title__training {
   color: #EB51C2;
 }
 .feature__title__food {
-  font-size: 18px;
   color: #00B21B;
 }
 .feature__copy__training, .feature__copy__food {
@@ -207,6 +228,7 @@ body {
   font-size: 22px;
   line-height: 1.5em;
   margin-top: 15px;
+  font-weight: bold;
 }
 .feature__description__training, .feature__description__food {
   font-family: "Noto Sans JP";
@@ -282,6 +304,26 @@ body {
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: forwards;
+}
+@media screen and (min-width: 600px) {
+  .trainer__content.active {
+    display: grid;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .trainer__content.active > .trainer__card {
+    margin-bottom: 0;
+  }
+  .staff__content.active {
+    display: grid;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .staff__content.active > .staff__card {
+    margin-bottom: 0;
+  }
 }
 .studio__container {
   background-color: #fff;
@@ -410,15 +452,17 @@ body {
 }
 .price__box__title {
   font-size: 18px;
+  font-weight: normal;
   margin-bottom: 5px;
 }
-.price__box__title__details {
+.price__box__details {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .faq__title-jp {
   color: #EB51C2;
+  padding-bottom: 0;
 }
 .faq__accordion__item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -429,7 +473,7 @@ body {
 .faq__accordion__title {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px 0 15px;
 }
 .faq__accordion__content {
   justify-content: space-between;
@@ -442,6 +486,7 @@ body {
 }
 .faq__question__title {
   font-size: 15px;
+  font-weight: 300;
 }
 .faq__question__button {
   background: none;
@@ -467,11 +512,7 @@ body {
 }
 
 .cta__img {
-  background-image: url(img/pc_cta.png);
-  height: 180px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 100%;
 }
 .cta__body {
   background-color: #EB51C2;
@@ -489,6 +530,23 @@ body {
 }
 .cta__button > a {
   color: #EB51C2;
+}
+
+.page-top {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  top: 93%;
+  right: 30px;
+  z-index: 100;
+}
+.page-top span {
+  color: #EB51C2;
+  transform: rotate(180deg);
+  line-height: 40px;
 }
 
 .footer {
