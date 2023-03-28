@@ -117,7 +117,7 @@ body {
   z-index: 0;
 }
 .mv__content {
-  margin-top: 103px;
+  margin-top: 90px;
 }
 .mv__content::after {
   content: "";
@@ -137,11 +137,11 @@ body {
   padding: 0 4px;
 }
 .mv__sub-title {
-  font-size: 12px;
+  font-size: min(3.5vw, 28px);
+  font-weight: 700;
   background-color: #fff;
   margin-top: 10px;
   display: inline-block;
-  padding-right: 15%;
 }
 .mv .btn, .mv .cta__button {
   height: 45px;
@@ -150,7 +150,7 @@ body {
 }
 
 .slogan {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .slogan__title {
   font-size: 56px;
@@ -161,6 +161,7 @@ body {
 }
 .slogan__sub-title {
   font-size: 16px;
+  font-weight: bold;
   text-align: center;
 }
 .slogan__discription {
@@ -238,7 +239,7 @@ body {
   animation-name: kf-fade-in-trainer;
   animation-duration: 1s;
   animation-timing-function: ease;
-  animation-delay: 0.2s;
+  animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: forwards;
@@ -540,12 +541,12 @@ body {
 }
 
 .title-display {
-  font-size: 42px;
+  font-size: min(11vw, 90px);
   font-weight: 400;
   height: 100%;
   font-style: italic;
   display: inline-block;
-  line-height: 1.1em;
+  line-height: 1em;
   background-color: #fff;
   opacity: 0;
 }
@@ -602,7 +603,7 @@ body {
 }
 @keyframes kf-fade-in-trainer {
   0% {
-    transform: translateY(5%);
+    transform: translateY(3%);
     opacity: 0;
   }
   100% {

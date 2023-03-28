@@ -52,7 +52,7 @@ body{
     z-index: 0;
 
     &__content{
-        margin-top: 103px;
+        margin-top: 90px;
 
         &::after{
             content: "";
@@ -70,7 +70,6 @@ body{
     }
 
     &__title{
-
         & > .pink{
             font-size: 34px;
             padding: 0 4px;
@@ -78,11 +77,11 @@ body{
     }
 
     &__sub-title{
-        font-size: 12px;
+        font-size: min(3.5vw, 28px);
+        font-weight: 700;
         background-color: $cWhite;
         margin-top: 10px;
         display: inline-block;
-        padding-right: 15%
     }
 
     & .btn{
@@ -94,7 +93,7 @@ body{
 }
 
 .slogan{
-    margin-top: 50px;
+    margin-top: 10px;
 
     &__title{
         font-size: 56px;
@@ -106,6 +105,7 @@ body{
 
     &__sub-title{
         font-size: 16px;
+        font-weight: bold;
         text-align: center;
     }
 
@@ -202,7 +202,6 @@ body{
             display: block;
             @include animation(
                 $name: kf-fade-in-trainer,
-                $delay: 0.2s
             );
         }
     }
@@ -626,12 +625,12 @@ body{
 }
 
 .title-display{
-    font-size: 42px;
+    font-size: min(11vw, 90px);
     font-weight: 400;
     height: 100%;
     font-style: italic;
     display: inline-block;
-    line-height: 1.1em;
+    line-height: 1em;
     background-color: $cWhite;
     opacity: 0;
 
@@ -688,7 +687,7 @@ body{
 
 @keyframes kf-fade-in-trainer {
     0%{
-        transform: translateY(5%);
+        transform: translateY(3%);
         opacity: 0;
     }
     100%{
