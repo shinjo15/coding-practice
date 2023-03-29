@@ -1,11 +1,25 @@
-.content-container, .mv, .feature__card-container, .price__container {
+.content-container, .mv, .feature__card-container {
   margin: 0 auto;
   padding: 0 20px;
 }
-.content-container__pg-lg, .trainer__continer, .studio__container, .price__title-container, .faq__container, .cta__body {
+.content-container__price, .price__content-body {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.content-container__pg-lg, .trainer__body, .studio__container, .price__title-body, .faq__container, .cta__body {
   padding: 40px 30px;
 }
 
+@media screen and (min-width: 1025px) {
+  .content-container__price, .price__content-body {
+    max-width: 1170px;
+  }
+  .content-container__pg-lg, .trainer__body, .studio__container, .price__title-body, .faq__container, .cta__body {
+    padding: 40px 30px;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
 .content__title, .trainer__title, .studio__title, .price__title, .faq__title {
   font-size: 40px;
   font-weight: 300;
@@ -17,12 +31,23 @@
   padding-bottom: 30px;
 }
 
+@media screen and (min-width: 1025px) {
+  .content__title, .trainer__title, .studio__title, .price__title, .faq__title {
+    font-size: 64px;
+    font-weight: 300;
+  }
+  .content__title-jp, .trainer__title-jp, .studio__title-jp, .price__title-jp, .faq__title-jp {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 30px;
+  }
+}
 .btn, .header .btn, .mv .btn, .cta__button, .header .cta__button {
   font-size: 13px;
   width: 300px;
-  height: 53px;
   border: none;
-  border-radius: 30px;
+  padding: 20px 10px;
+  border-radius: 50px;
   background-color: #EB51C2;
 }
 .btn > a, .header .btn > a, .mv .btn > a, .cta__button > a, .header .cta__button > a {
@@ -31,10 +56,17 @@
   font-weight: 600;
 }
 
+@media screen and (min-width: 1025px) {
+  .btn, .header .btn, .mv .btn, .cta__button, .header .cta__button {
+    font-size: 20px;
+    width: 370px;
+    padding: 30px;
+  }
+}
 .card, .feature__card__training, .feature__card__food {
   width: 100%;
   padding: 40px 30px;
-  border-radius: 3%;
+  border-radius: 8px;
   background-color: #fff;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
 }
@@ -60,6 +92,13 @@
   padding: 20px 20px 35px;
 }
 
+@media screen and (min-width: 1025px) {
+  .trainer-description, .trainer__description, .staff__description {
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 20px;
+  }
+}
 .slide-btn, .studio .swiper-button-prev, .studio .swiper-button-next {
   height: 40px !important;
   width: 40px !important;
@@ -100,10 +139,10 @@ body {
   height: 100%;
 }
 .header .btn, .header .cta__button {
-  height: 36px;
   width: 186px;
   font-size: 12px;
   display: none;
+  padding: 10px;
 }
 .header.h-scroll {
   background-color: #fff;
@@ -115,6 +154,20 @@ body {
   display: block;
 }
 
+@media screen and (min-width: 1025px) {
+  .header {
+    height: 80px;
+    padding: 0 35px;
+  }
+  .header__logo {
+    height: 29%;
+  }
+  .header .btn, .header .cta__button {
+    height: 45px;
+    width: 250px;
+    font-size: 16px;
+  }
+}
 .mv {
   padding-top: 60px;
   position: relative;
@@ -148,14 +201,29 @@ body {
   display: inline-block;
 }
 .mv .btn, .mv .cta__button {
-  height: 45px;
+  display: block;
   width: 220px;
+  padding: 15px 10px;
   margin-top: 15px;
 }
 
 @media screen and (min-width: 600px) {
   .mv__content::after {
     height: 500px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .mv__content {
+    margin-top: 180px;
+    margin-left: 12%;
+  }
+  .mv__content::after {
+    height: 680px;
+    border-radius: 0 0 0 90px;
+  }
+  .mv .btn, .mv .cta__button {
+    width: 370px;
+    padding: 30px;
   }
 }
 .slogan {
@@ -192,10 +260,22 @@ body {
     text-align: center;
   }
 }
+@media screen and (min-width: 1025px) {
+  .slogan__title {
+    font-size: 108px;
+  }
+  .slogan__sub-title {
+    font-size: 32px;
+  }
+  .slogan__discription {
+    font-size: 16px;
+    line-height: 2em;
+  }
+}
 .feature {
   margin-top: 30px;
 }
-.feature__img {
+.feature__img__training, .feature__img__food {
   width: 100%;
 }
 .feature__card-container {
@@ -214,14 +294,13 @@ body {
 .feature__card__training, .feature__card__food {
   transform: translateY(-5px);
 }
-.feature__title {
-  font-size: 18px;
-}
 .feature__title__training {
   color: #EB51C2;
+  font-size: 18px;
 }
 .feature__title__food {
   color: #00B21B;
+  font-size: 18px;
 }
 .feature__copy__training, .feature__copy__food {
   font-family: "Noto Sans JP";
@@ -241,6 +320,42 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1025px) {
+  .feature {
+    max-width: 1300px;
+    margin: 30px auto 0;
+  }
+  .feature__training, .feature__food {
+    position: relative;
+    margin-bottom: 100px;
+  }
+  .feature__img__training, .feature__img__food {
+    width: 70%;
+  }
+  .feature__card-container {
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
+    width: 555px;
+    margin-bottom: 0;
+  }
+  .feature__card__training, .feature__card__food {
+    padding: 60px;
+  }
+  .feature__title__training {
+    font-size: 24px;
+  }
+  .feature__title__food {
+    font-size: 24px;
+  }
+  .feature__copy__training, .feature__copy__food {
+    font-size: 32px;
+  }
+  .feature__description__training, .feature__description__food {
+    font-size: 15px;
+    line-height: 1.8em;
+  }
+}
 .pink {
   color: #EB51C2;
 }
@@ -281,8 +396,7 @@ body {
   color: #fff;
   background: none;
   border: none;
-  height: 35px;
-  line-height: 35px;
+  padding: 5px 0 10px 0;
   margin-bottom: 20px;
   text-align: center;
   flex-basis: 50%;
@@ -290,6 +404,13 @@ body {
 }
 .trainer__switching__t.active, .trainer__switching__s.active {
   border-bottom: 2px solid #fff;
+  font-weight: bold;
+}
+@media screen and (min-width: 1025px) {
+  .trainer__switching__t, .trainer__switching__s {
+    font-size: 18px;
+    padding: 5px 0 20px 0;
+  }
 }
 .staff__content {
   display: none;
@@ -403,6 +524,9 @@ body {
 .price__scroll.active {
   opacity: 1;
 }
+.price__card-body {
+  margin: 0 auto;
+}
 .price__card {
   width: 320px;
   padding: 40px 20px 0;
@@ -460,6 +584,11 @@ body {
   font-weight: bold;
 }
 
+@media screen and (min-width: 1025px) {
+  .price__scroll {
+    display: none;
+  }
+}
 .faq__title-jp {
   color: #EB51C2;
   padding-bottom: 0;

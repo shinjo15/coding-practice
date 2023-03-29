@@ -8,7 +8,7 @@ html{
 body{
     font-family: 'Josefin Sans', 'Noto Sans JP', sans-serif;
 }
-
+// ------ header ----------
 .header{
     height: 60px;
     width: 100%;
@@ -31,10 +31,10 @@ body{
 
     & .btn{
         @extend .btn;
-        height: 36px;
         width: 186px;
         font-size: 12px;
         display: none;
+        padding: 10px;
     }
 
     &.h-scroll{
@@ -48,7 +48,24 @@ body{
         }
     }
 }
+@media screen and (min-width: $md) {
+    .header{
+        height: 80px;
+        padding: 0 35px;
 
+        &__logo{
+            height: 29%;
+        }
+
+        & .btn{
+            height: 45px;
+            width: 250px;
+            font-size: 16px;
+        }
+    }
+}
+
+// ------ mv ----------
 .mv{
     padding-top: 60px;
     @extend .content-container;
@@ -90,13 +107,14 @@ body{
 
     & .btn{
         @extend .btn;
-        height: 45px;
+        display: block;
         width: 220px;
+        padding: 15px 10px;
         margin-top: 15px;
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $sp) {
     .mv{
         &__content{
             &::after{
@@ -105,7 +123,26 @@ body{
         }
     }
 }
+@media screen and (min-width: $md) {
+    .mv{
+        &__content{
+            margin-top: 180px;
+            margin-left: 12%;
+    
+            &::after{
+                height: 680px;
+                border-radius: 0 0 0 90px;
+            }
+        }
 
+        & .btn{
+            width: 370px;
+            padding: 30px;
+        }
+    }
+}
+
+// ------ slogan ----------
 .slogan{
     margin-top: 10px;
 
@@ -132,7 +169,7 @@ body{
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $sp) {
     .slogan{
         margin-top: 90px;
     
@@ -147,11 +184,28 @@ body{
         }
     }
 }
+@media screen and (min-width: $md) {
+    .slogan{
+        &__title{
+            font-size: 108px;
+        }
 
+        &__sub-title{
+            font-size: 32px;
+        }
+
+        &__discription{
+            font-size: 16px;
+            line-height: 2em;
+        }
+    }
+}
+
+// ------ feature ----------
 .feature{
     margin-top: 30px;
 
-    &__img{
+    &__img__training, &__img__food{
         width: 100%;
     }
 
@@ -176,13 +230,13 @@ body{
     }
 
     &__title{
-        font-size: 18px;
-
         &__training {
             color: $cPink;
+            font-size: 18px;
         }
         &__food{
             color: $cGreen;
+            font-size: 18px;
         }
     }
 
@@ -211,16 +265,71 @@ body{
     }
 }
 
+@media screen and (min-width: $md) {
+    .feature{
+        max-width: 1300px;
+        margin: 30px auto 0;
+        &__training, &__food{
+            position: relative;
+            margin-bottom: 100px;
+        }
+
+        &__img__training, &__img__food{
+            width: 70%;
+        }
+
+        &__card-container{
+            position: absolute;
+            right: 20px;
+            bottom: -20px;
+            width: 555px;
+            margin-bottom: 0;
+        }
+
+        &__card{
+            &__training, &__food{
+                padding: 60px;
+            }
+        }
+
+        &__title{
+            &__training {
+                font-size: 24px;
+            }
+            &__food{
+                font-size: 24px;
+            }
+        }
+
+        &__copy{
+            &__training, &__food {
+                font-size: 32px;
+            }
+        }
+    
+        &__description{
+            &__training, &__food{
+                font-size: 15px;
+                line-height: 1.8em;
+            }
+        }
+    }
+}
+
 .pink{
     color: $cPink;
 }
 
+// ------ trainer ----------
 .trainer{
     margin-top: 55px;
     position: relative;
 
     &__continer{
         background-color: $cPink;
+    }
+
+    &__body{
         @extend .content-container__pg-lg;
     }
 
@@ -255,8 +364,7 @@ body{
             color: $cWhite;
             background: none;
             border: none;
-            height: 35px;
-            line-height: 35px;
+            padding: 5px 0 10px 0;
             margin-bottom: 20px;
             text-align: center;
             flex-basis: 50%;
@@ -264,6 +372,7 @@ body{
 
             &.active{
                 border-bottom: 2px solid $cWhite;
+                font-weight: bold;
             }
         }
     }
@@ -281,6 +390,18 @@ body{
     }
 }
 
+@media screen and (min-width: $md) {
+    .trainer{
+        &__switching{
+            &__t, &__s{
+                font-size: 18px;
+                padding: 5px 0 20px 0;
+            }
+        }
+    }
+}
+
+// ------ staff ----------
 .staff{
     &__content{
         display: none;
@@ -308,7 +429,7 @@ body{
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $sp) {
     .trainer{
         &__content{
             &.active{
@@ -337,6 +458,7 @@ body{
     }
 }
 
+// ------ studio ----------
 .studio{
     &__container{
         @extend .content-container__pg-lg;
@@ -398,15 +520,19 @@ body{
     }
 }
 
+// ------ price ----------
 .price{
     &__title-container{
-        @extend .content-container__pg-lg;
         padding-bottom: 0;
         background-color: $cPink; 
     }
 
+    &__title-body{
+        @extend .content-container__pg-lg;
+    }
+
     &__container{
-        @extend .content-container;
+        
         width: 100%;
         background-color: $cPink;
         padding-top: 25px;
@@ -414,6 +540,10 @@ body{
         white-space: nowrap;
         overflow-x: auto;
         position: relative;
+    }
+
+    &__content-body{
+        @extend .content-container__price;
     }
 
     &__title{
@@ -454,6 +584,10 @@ body{
         &.active{
             opacity: 1;
         }
+    }
+
+    &__card-body{
+        margin: 0 auto;
     }
 
     &__card{
@@ -522,6 +656,15 @@ body{
     }
 }
 
+@media screen and (min-width: $md) {
+    .price{
+        &__scroll{
+            display: none;
+        }
+    }
+}
+
+// ------ faq ----------
 .faq{
     &__container{
         @extend .content-container__pg-lg;
@@ -600,6 +743,7 @@ body{
     }
 }
 
+// ------ cta ----------
 .cta{
     &__img{
         width: 100%;
@@ -630,6 +774,7 @@ body{
     }
 }
 
+// ------ page-top ----------
 .page-top{
     width: 40px;
     height: 40px;
@@ -648,6 +793,7 @@ body{
     }
 }
 
+// ------ footer ----------
 .footer{
     background-color: $cBlack;
 
