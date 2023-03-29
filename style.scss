@@ -523,27 +523,26 @@ body{
 // ------ price ----------
 .price{
     &__title-container{
-        padding-bottom: 0;
         background-color: $cPink; 
+        margin-bottom: -1px;
     }
 
     &__title-body{
         @extend .content-container__pg-lg;
+        padding-bottom: 0;
     }
 
-    &__container{
-        
-        width: 100%;
+    &__container{       
         background-color: $cPink;
+    }
+
+    &__content-body{
+        @extend .content-container__price;
         padding-top: 25px;
         padding-bottom: 25px;
         white-space: nowrap;
         overflow-x: auto;
         position: relative;
-    }
-
-    &__content-body{
-        @extend .content-container__price;
     }
 
     &__title{
@@ -586,15 +585,11 @@ body{
         }
     }
 
-    &__card-body{
-        margin: 0 auto;
-    }
-
     &__card{
         width: 320px;
         padding: 40px 20px 0;
-        margin-left: 20px;
         border-radius: 8px;
+        margin-left: 20px;
         background-color: $cWhite;
         text-align: center;
         display: inline-block;
@@ -660,6 +655,19 @@ body{
     .price{
         &__scroll{
             display: none;
+        }
+
+        &__card{
+            width: 33.3%;
+            margin-left: 0;
+        }
+
+        &__content-body{
+            display: flex;
+            gap: 15px;
+            overflow-x: hidden;
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }
@@ -774,15 +782,25 @@ body{
     }
 }
 
+@media screen and (min-width: $md) {
+    .cta{   
+        &__text{
+            color: $cWhite;
+            font-size: 64px;
+            margin-bottom: 15px;
+        }
+    }    
+}
+
 // ------ page-top ----------
 .page-top{
     width: 40px;
     height: 40px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: $cWhite;
     text-align: center;
     border-radius: 50%;
     position: fixed;
-    top: 93%;
+    bottom: 5%;
     right: 30px;
     z-index: 100;
 
@@ -790,6 +808,20 @@ body{
         color: $cPink;
         transform: rotate(180deg);
         line-height: 40px;
+    }
+}
+
+@media screen and (min-width: $md) {
+    .page-top{
+        width: 80px;
+        height: 80px;
+    
+        & span{
+            color: $cPink;
+            transform: rotate(180deg);
+            font-size: 40px;
+            line-height: 80px;
+        }
     }
 }
 
@@ -805,6 +837,20 @@ body{
         & > a{
             color: $cWhite;
             text-decoration: none;
+        }
+    }
+}
+
+@media screen and (min-width: $md) {
+    .footer{
+        &__logo{
+            padding: 100px 20px;    
+            & > a{
+                font-size: 32px;
+                letter-spacing: 0.4rem;
+                color: $cWhite;
+                text-decoration: none;
+            }
         }
     }
 }

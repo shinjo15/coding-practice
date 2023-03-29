@@ -12,7 +12,9 @@
 
 @media screen and (min-width: 1025px) {
   .content-container__price, .price__content-body {
-    max-width: 1170px;
+    max-width: 1110px;
+    width: 95%;
+    margin: 0 auto;
   }
   .content-container__pg-lg, .trainer__body, .studio__container, .price__title-body, .faq__container, .cta__body {
     padding: 40px 30px;
@@ -480,12 +482,16 @@ body {
   right: -17px !important;
 }
 .price__title-container {
-  padding-bottom: 0;
   background-color: #EB51C2;
+  margin-bottom: -1px;
+}
+.price__title-body {
+  padding-bottom: 0;
 }
 .price__container {
-  width: 100%;
   background-color: #EB51C2;
+}
+.price__content-body {
   padding-top: 25px;
   padding-bottom: 25px;
   white-space: nowrap;
@@ -524,14 +530,11 @@ body {
 .price__scroll.active {
   opacity: 1;
 }
-.price__card-body {
-  margin: 0 auto;
-}
 .price__card {
   width: 320px;
   padding: 40px 20px 0;
-  margin-left: 20px;
   border-radius: 8px;
+  margin-left: 20px;
   background-color: #fff;
   text-align: center;
   display: inline-block;
@@ -587,6 +590,17 @@ body {
 @media screen and (min-width: 1025px) {
   .price__scroll {
     display: none;
+  }
+  .price__card {
+    width: 33.3%;
+    margin-left: 0;
+  }
+  .price__content-body {
+    display: flex;
+    gap: 15px;
+    overflow-x: hidden;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .faq__title-jp {
@@ -661,14 +675,21 @@ body {
   color: #EB51C2;
 }
 
+@media screen and (min-width: 1025px) {
+  .cta__text {
+    color: #fff;
+    font-size: 64px;
+    margin-bottom: 15px;
+  }
+}
 .page-top {
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #fff;
   text-align: center;
   border-radius: 50%;
   position: fixed;
-  top: 93%;
+  bottom: 5%;
   right: 30px;
   z-index: 100;
 }
@@ -678,6 +699,18 @@ body {
   line-height: 40px;
 }
 
+@media screen and (min-width: 1025px) {
+  .page-top {
+    width: 80px;
+    height: 80px;
+  }
+  .page-top span {
+    color: #EB51C2;
+    transform: rotate(180deg);
+    font-size: 40px;
+    line-height: 80px;
+  }
+}
 .footer {
   background-color: #111111;
 }
@@ -691,6 +724,17 @@ body {
   text-decoration: none;
 }
 
+@media screen and (min-width: 1025px) {
+  .footer__logo {
+    padding: 100px 20px;
+  }
+  .footer__logo > a {
+    font-size: 32px;
+    letter-spacing: 0.4rem;
+    color: #fff;
+    text-decoration: none;
+  }
+}
 .svg__content {
   width: 100%;
 }

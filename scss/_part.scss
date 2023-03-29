@@ -25,7 +25,9 @@ $md: 1025px;
 @media screen and (min-width: $md) {
     .content-container{
         &__price{
-            max-width: 1170px;
+            max-width: 1110px;
+            width: 95%;
+            margin: 0 auto;
         }
 
         &__pg-lg{
