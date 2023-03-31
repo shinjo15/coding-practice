@@ -1,0 +1,35 @@
+// color
+$cWhite: #fff;
+$cBlack: #000;
+$cSkyBlue: #00fff5;
+
+.content-container{
+    max-width: 1110px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.btn{
+    width: 230px;
+    height: 60px;
+    background-color: $cSkyBlue;
+    text-align: center;
+
+    & > a{
+        font-size: 18px;
+        font-weight: bold;
+        color: $cBlack;
+        line-height: 100%;
+    }
+}
+
+.btn-sm{
+    @extend .btn;
+    width: 164px;
+    height: 45px;
+
+    & > a{
+        font-size: 15px;
+        font-weight: normal;
+    }
+}

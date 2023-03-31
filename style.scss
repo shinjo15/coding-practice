@@ -1,0 +1,41 @@
+@use "scss/part" as *;
+
+body{
+    font-family: 'Exo', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    padding: 25px 40px 0 30px;
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        font-size: 20px;
+        font-weight: bold;
+        color: $cSkyBlue;
+        display: flex;
+        align-items: center;
+    }
+
+    &__ul{
+        display: flex;
+        gap: 30px;
+    }
+
+    &__item{
+        font-size: 16px;
+        color: $cSkyBlue;
+        display: flex;
+        align-items: center;
+    }
+
+    &__btn{
+        @extend .btn-sm;
+    }
+}
