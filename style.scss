@@ -1,18 +1,19 @@
 @use "scss/part" as *;
 
 body{
-    font-family: 'Exo', sans-serif;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Exo', 'Noto Sans JP', sans-serif;
 }
 
 .header{
     width: 100%;
     height: 100px;
     padding: 25px 40px 0 30px;
+    position: fixed;
 
     &__container{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 20px;
     }
 
     &__logo{
@@ -37,5 +38,84 @@ body{
 
     &__btn{
         @extend .btn-sm;
+    }
+
+    &__sound{
+        font-size: 13px;
+        text-align: end;
+
+        & .sound-off{
+            color: #bfbfbf;
+            display: block;
+        }
+
+        & .sound-on{
+            color: $cWhite;
+            display: none;
+        }
+
+        &.active{
+            & .sound-off{
+                display: none;
+            }
+    
+            & .sound-on{
+                display: block;
+            }
+        }
+    }
+}
+
+.mv{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    &__video{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -10;
+
+        & > video{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content{
+        padding: 220px 0 0 140px;
+    }
+
+    &__genre{
+        font-size: 32px;
+        font-weight: bold;
+        color: $cWhite;
+        letter-spacing: 0.3em;
+        margin-bottom: 30px;
+    }
+
+    &__title{
+        font-family: 'Exo';
+        font-weight: bold;
+        font-size: 130px;
+        color: $cWhite;
+        line-height: 1em;
+        letter-spacing: 0.1em;
+    }
+
+    &__title-jp{
+        font-size: 34px;
+        margin: 5px 0 30px;
+        color: $cWhite;
+        letter-spacing: 1em;
     }
 }
