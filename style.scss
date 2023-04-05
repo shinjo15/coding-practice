@@ -38,6 +38,7 @@ body{
     padding: 25px 40px 0 30px;
     position: fixed;
     z-index: 100;
+    background: linear-gradient($cBlack, rgba(0,0,0,0));;
 
     &__container{
         display: flex;
@@ -233,6 +234,78 @@ body{
         }
     }
 }
+
+.cta{
+    width: 100%;
+    position: relative;
+
+    &__content{
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    &__title{
+        font-size: 64px;
+        font-weight: bold;
+        color: $cWhite;
+        letter-spacing: 0.05em;
+    }
+
+    &__btn{
+        @extend .btn;
+        margin-top: 25px;
+    }
+
+    &__svg{
+        &__top{
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(180deg);
+        }
+
+        &__bottom{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}  
+
+.trailer{
+    background-color: $cSkyBlue;
+    width: 100%;
+    padding: 110px 0;
+
+    &__content{
+        @extend .content-container;
+    }
+
+    &__title{
+        @extend .content-title;
+
+        &::after{
+            background-color: $cBlack;
+        }
+    }
+
+    &__video{
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        margin-top: 40px;
+
+        & iframe{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    }
+}
+
 
 @keyframes update{
     0%{

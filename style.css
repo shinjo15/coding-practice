@@ -1,17 +1,17 @@
 @charset "UTF-8";
-.content-container {
+.content-container, .trailer__content {
   max-width: 1110px;
   width: 95%;
   margin: 0 auto;
 }
 
-.btn, .btn-sm, .header__btn {
+.btn, .cta__btn, .btn-sm, .header__btn {
   width: 230px;
   height: 60px;
   background-color: #00fff5;
   text-align: center;
 }
-.btn > a, .btn-sm > a, .header__btn > a {
+.btn > a, .cta__btn > a, .btn-sm > a, .header__btn > a {
   font-size: 18px;
   font-weight: bold;
   color: #000;
@@ -26,20 +26,20 @@
   font-size: 15px;
 }
 
-.content-title, .story__heding {
+.content-title, .story__heding, .trailer__title {
   position: relative;
   font-size: 80px;
   font-weight: bold;
   letter-spacing: 0.1em;
   padding-bottom: 28px;
 }
-.content-title::after, .story__heding::after {
+.content-title::after, .story__heding::after, .trailer__title::after {
   content: "";
   position: absolute;
   top: 100px;
   left: 0;
   height: 8px;
-  width: 13%;
+  width: 80px;
   background-color: #00fff5;
 }
 
@@ -80,6 +80,7 @@ body {
   padding: 25px 40px 0 30px;
   position: fixed;
   z-index: 100;
+  background: linear-gradient(#000, rgba(0, 0, 0, 0));
 }
 .header__container {
   display: flex;
@@ -238,6 +239,58 @@ body {
 .story__img > img.reverse {
   transform: skewX(5deg);
   box-shadow: 10px 10px #00fff5;
+}
+
+.cta {
+  width: 100%;
+  position: relative;
+}
+.cta__content {
+  padding: 100px 0;
+  text-align: center;
+}
+.cta__title {
+  font-size: 64px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+.cta__btn {
+  margin-top: 25px;
+}
+.cta__svg__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+.cta__svg__bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.trailer {
+  background-color: #00fff5;
+  width: 100%;
+  padding: 110px 0;
+}
+.trailer__title::after {
+  background-color: #000;
+}
+.trailer__video {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  margin-top: 40px;
+}
+.trailer__video iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 @keyframes update {
