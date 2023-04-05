@@ -52,8 +52,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: hidden;
-  z-index: -10;
+  z-index: -1;
 }
 .bgParallax::before {
   display: block;
@@ -67,14 +66,11 @@ body {
   background-size: 4px 4px;
 }
 .bgParallax > video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  width: 100%;
+  height: 100vh;
+  vertical-align: bottom;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
 }
 
 .header {
@@ -111,18 +107,21 @@ body {
   font-size: 13px;
   text-align: end;
 }
-.header__sound .sound-off {
+.header__sound__box {
+  display: inline-block;
+}
+.header__sound__box .sound-off {
   color: #bfbfbf;
+  display: none;
+}
+.header__sound__box .sound-off.active {
   display: block;
 }
-.header__sound .sound-on {
+.header__sound__box .sound-on {
   color: #fff;
   display: none;
 }
-.header__sound.active .sound-off {
-  display: none;
-}
-.header__sound.active .sound-on {
+.header__sound__box .sound-on.active {
   display: block;
 }
 
