@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .content-container {
   max-width: 1110px;
   width: 95%;
@@ -92,6 +93,7 @@ body {
   display: flex;
   align-items: center;
   letter-spacing: 0.1em;
+  cursor: pointer;
 }
 .header__ul {
   display: flex;
@@ -109,6 +111,7 @@ body {
 }
 .header__sound__box {
   display: inline-block;
+  cursor: pointer;
 }
 .header__sound__box .sound-off {
   color: #bfbfbf;
@@ -123,6 +126,11 @@ body {
 }
 .header__sound__box .sound-on.active {
   display: block;
+}
+.header__sound__box .sound-icon {
+  font-size: 17px;
+  vertical-align: bottom;
+  padding: 0 0 1px 5px;
 }
 
 .mv {
@@ -153,6 +161,29 @@ body {
   margin: 5px 0 30px;
   color: #fff;
   letter-spacing: 1em;
+}
+.mv__update {
+  position: absolute;
+  bottom: 50px;
+  right: 40px;
+  border: 1px solid #00fff5;
+  background-color: #000;
+  width: 350px;
+}
+.mv__update__container {
+  margin: 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.mv__update__text {
+  color: #00fff5;
+  font-size: 14px;
+  animation: update 10s linear infinite;
+  transform: translateX(105%);
+}
+.mv__update__text__white {
+  color: #fff;
+  padding-right: 10px;
 }
 .mv > svg {
   position: absolute;
@@ -207,4 +238,89 @@ body {
 .story__img > img.reverse {
   transform: skewX(5deg);
   box-shadow: 10px 10px #00fff5;
+}
+
+@keyframes update {
+  0% {
+    transform: translateX(105%);
+  }
+  10% {
+    transform: translateX(105%);
+  }
+  100% {
+    transform: translateX(-135%);
+  }
+}
+.scrolldown2 {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  bottom: 10px;
+  left: 2%;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 span {
+  /*描画位置*/
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  /*テキストの形状*/
+  color: #00fff5;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  /*縦書き設定*/
+  writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  /*丸の形状*/
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00fff5;
+  /*丸の動き1.6秒かけて透過し、永遠にループ*/
+  animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* 線の描写 */
+.scrolldown2:after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*線の形状*/
+  width: 2px;
+  height: 50px;
+  background: #00fff5;
 }/*# sourceMappingURL=style.css.map */
