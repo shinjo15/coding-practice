@@ -306,6 +306,33 @@ body{
     }
 }
 
+.footer{
+    width: 100%;
+    height: 110px;
+    background-color: $cBlack;
+
+    &__container{
+        height: 100%;
+        margin: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__sns-box{
+        display: flex;
+        column-gap: 10px;
+    }
+
+    &__item{
+        height: 30px;
+    }
+
+    &__copy{
+        color: $cWhite;
+    }
+}
+
 
 @keyframes update{
     0%{
