@@ -20,3 +20,12 @@ document.addEventListener('DOMContentLoaded',
     soundOn.addEventListener('click',soundOnCb);
   }
 );
+
+const AtomSpinner = window['epic-spinners'].AtomSpinner;
+
+new Vue({
+  el: '#app',
+  components: {
+    'atom-spinner':AtomSpinner,
+  }
+});
