@@ -47,6 +47,22 @@ body {
   font-family: "Exo", "Noto Sans JP", sans-serif;
 }
 
+.loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #000;
+  /* 以下のコードを追加 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+}
+.loading.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .bgParallax {
   position: fixed;
   top: 0;
