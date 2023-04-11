@@ -17,6 +17,15 @@
   line-height: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  .btn, .btn-sm {
+    width: 170px;
+    height: 56px;
+  }
+  .btn > a, .btn-sm > a {
+    font-size: 16px;
+  }
+}
 .btn-sm {
   width: 164px;
   height: 45px;

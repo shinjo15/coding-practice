@@ -3,6 +3,10 @@ $cWhite: #fff;
 $cBlack: #000;
 $cSkyBlue: #00fff5;
 
+// レスポンシブ対応
+$mw: max-width;
+$tb: 767px;
+
 .content-container{
     max-width: 1110px;
     width: 95%;
@@ -20,6 +24,17 @@ $cSkyBlue: #00fff5;
         font-weight: bold;
         color: $cBlack;
         line-height: 100%;
+    }
+}
+
+@media screen and ($mw: $tb){
+    .btn{
+        width: 170px;
+        height: 56px;
+    
+        & > a{
+            font-size: 16px;
+        }
     }
 }
 
