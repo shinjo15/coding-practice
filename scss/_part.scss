@@ -65,3 +65,16 @@ $tb: 767px;
         background-color: $cSkyBlue;
     }
 }
+
+@media screen and ($mw: $tb){
+    .content-title{
+        font-size: 50px;
+        padding-bottom: 15px;
+    
+        &::after{
+            top: 60px;
+            height: 6px;
+            width: 60px;
+        }
+    }
+}

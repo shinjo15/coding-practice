@@ -51,6 +51,17 @@
   background-color: #00fff5;
 }
 
+@media screen and (max-width: 767px) {
+  .content-title {
+    font-size: 50px;
+    padding-bottom: 15px;
+  }
+  .content-title::after {
+    top: 60px;
+    height: 6px;
+    width: 60px;
+  }
+}
 .atom-spinner, .atom-spinner * {
   box-sizing: border-box;
 }

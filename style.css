@@ -5,13 +5,13 @@
   margin: 0 auto;
 }
 
-.btn, .cta__btn, .cta-2__btn, .btn-sm, .header__btn {
+.btn, .cta__btn, .cta-2__btn, .footer__btn, .btn-sm, .header__btn {
   width: 230px;
   height: 60px;
   background-color: #00fff5;
   text-align: center;
 }
-.btn > a, .cta__btn > a, .cta-2__btn > a, .btn-sm > a, .header__btn > a {
+.btn > a, .cta__btn > a, .cta-2__btn > a, .footer__btn > a, .btn-sm > a, .header__btn > a {
   font-size: 18px;
   font-weight: bold;
   color: #000;
@@ -19,11 +19,11 @@
 }
 
 @media screen and (max-width: 767px) {
-  .btn, .cta__btn, .cta-2__btn, .btn-sm, .header__btn {
+  .btn, .cta__btn, .cta-2__btn, .footer__btn, .btn-sm, .header__btn {
     width: 170px;
     height: 56px;
   }
-  .btn > a, .cta__btn > a, .cta-2__btn > a, .btn-sm > a, .header__btn > a {
+  .btn > a, .cta__btn > a, .cta-2__btn > a, .footer__btn > a, .btn-sm > a, .header__btn > a {
     font-size: 16px;
   }
 }
@@ -52,6 +52,17 @@
   background-color: #00fff5;
 }
 
+@media screen and (max-width: 767px) {
+  .content-title, .story__heding, .trailer__title {
+    font-size: 50px;
+    padding-bottom: 15px;
+  }
+  .content-title::after, .story__heding::after, .trailer__title::after {
+    top: 60px;
+    height: 6px;
+    width: 60px;
+  }
+}
 body {
   font-family: "Exo", "Noto Sans JP", sans-serif;
 }
@@ -306,7 +317,7 @@ body {
   padding-top: 40px;
 }
 .story__img > img {
-  max-width: 100%;
+  width: 100%;
   display: inline-block;
   transform: skewX(-5deg);
   box-shadow: 10px 10px #00fff5;
@@ -316,6 +327,46 @@ body {
   box-shadow: 10px 10px #00fff5;
 }
 
+@media screen and (max-width: 767px) {
+  .story {
+    padding: 40px 0;
+  }
+  .story__container {
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .story__container.change {
+    flex-direction: column-reverse;
+  }
+  .story__text-box {
+    width: 100%;
+  }
+  .story__title {
+    font-size: 24px;
+    padding-top: 30px;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+  }
+  .story__description {
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    line-height: 1.8em;
+    padding-top: 30px;
+  }
+  .story__img {
+    width: 80%;
+    margin: 30px auto 0;
+  }
+  .story__img > img {
+    width: 100%;
+  }
+  .story__img > img.reverse {
+    transform: skewX(5deg);
+    box-shadow: 10px 10px #00fff5;
+  }
+}
 .cta, .cta-2 {
   width: 100%;
   position: relative;
@@ -353,6 +404,29 @@ body {
   margin-top: 25px;
 }
 
+@media screen and (max-width: 767px) {
+  .cta::before, .cta-2::before {
+    width: 200px;
+    height: 30px;
+  }
+  .cta::after, .cta-2::after {
+    width: 200px;
+    height: 30px;
+  }
+  .cta__content, .cta-2__content {
+    padding: 70px 0;
+    text-align: center;
+  }
+  .cta__title, .cta-2__title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.05em;
+  }
+  .cta__btn, .cta-2__btn {
+    margin-top: 25px;
+  }
+}
 .cta-2::before {
   content: "";
   position: absolute;
@@ -371,6 +445,16 @@ body {
   width: 430px;
   height: 40px;
   background-image: url(assets/bg-line-bottom-color.svg);
+}
+@media screen and (max-width: 767px) {
+  .cta::before, .cta-2::before {
+    width: 200px;
+    height: 30px;
+  }
+  .cta::after, .cta-2::after {
+    width: 200px;
+    height: 30px;
+  }
 }
 .trailer {
   background-color: #00fff5;
@@ -418,7 +502,45 @@ body {
 .footer__copy {
   color: #fff;
 }
+.footer__box-btn {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #000;
+  z-index: 100;
+}
+.footer__btn {
+  width: 100%;
+}
 
+@media screen and (max-width: 767px) {
+  .footer {
+    width: 100%;
+    height: auto;
+    padding: 40px 0 120px;
+  }
+  .footer__container {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+  }
+  .footer__copy {
+    margin-top: 40px;
+  }
+  .footer__box-btn {
+    opacity: 0;
+  }
+  .footer__box-btn.active {
+    display: block;
+    opacity: 0;
+    animation: footer-btn 0.5s linear forwards;
+  }
+}
 @keyframes update {
   0% {
     transform: translateX(105%);
@@ -439,6 +561,14 @@ body {
   }
   100% {
     transform: translateX(-190%);
+  }
+}
+@keyframes footer-btn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .scrolldown2 {
